@@ -68,6 +68,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/navify
 
+extra_css:
+  - stylesheets/extra.css
+
 # Extensions
 markdown_extensions:
   - admonition
@@ -111,4 +114,19 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Home: index.md
+  - Getting Started:
+      - Overview: index.md
+      - Environment Setup: intro/environment.md
+      - Installing Navify: intro/cli.md
+      - Package & CDN: intro/cdn.md
+      - Next Steps: intro/next.md
+  - Developing:
+      - Starting an App: developing/starting.md
+      - Previewing: developing/previewing.md
+      - Development for iOS: developing/ios.md
+      - Development for Android: developing/android.md
+      - Hardware Back Button: developing/hardware-back-button.md
+      - Keyboard: developing/keyboard.md
+  - Kdu:
+      - Overview: kdu/overview.md
+      # - Quickstart: kdu/quickstart.md
