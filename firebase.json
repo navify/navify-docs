@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "navifyframework",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
