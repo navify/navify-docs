@@ -33,7 +33,7 @@ Here, `myApp` is the name of the project, `tabs` is the starter template, and th
 See all available templates with the following command:
 
 ```shell-session
-$ ionic start --list
+$ navify start --list
 ```
 
 These templates provide a great starting point for any app and include all the best practices for making a code base scale.
