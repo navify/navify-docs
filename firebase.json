@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "navifyframework",
-    "public": ".",
+    "public": "site",
     "ignore": [
       "firebase.json",
       "**/.*",
