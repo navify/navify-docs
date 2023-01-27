@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fab</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-fab-button {
+      --background: #b7f399;
+      --background-activated: #87d361;
+      --background-hover: #a3e681;
+      --border-radius: 15px;
+      --box-shadow: 0px 1px 2px 0px rgba(0,0,0,.3), 0px 1px 3px 1px rgba(0,0,0,.15);
+      --color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-fab>
+          <nav-fab-button>
+            <nav-icon name="add"></nav-icon>
+          </nav-fab-button>
+          <nav-fab-list side="end">
+            <nav-fab-button>
+              <nav-icon name="document"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button>
+              <nav-icon name="color-palette"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button>
+              <nav-icon name="globe"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+        </nav-fab>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

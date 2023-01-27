@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breadcrumbs</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@latest/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core@latest/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@latest/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+
+      nav-breadcrumbs.ios {
+        padding: 6px 8px;
+      }
+
+      nav-breadcrumbs.md {
+        padding: 0 4px;
+      }
+
+      nav-content {
+        --background: #f2f2f7;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Breadcrumbs</nav-title>
+        </nav-toolbar>
+      </nav-header>
+      <nav-content fullscreen="true">
+        <nav-list inset="true">
+          <nav-list-header>Basic</nav-list-header>
+          <nav-breadcrumbs>
+            <nav-breadcrumb href="#"> Home </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics"> Electronics </nav-breadcrumb>
+            <nav-breadcrumb href="#photography"> Photography </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Colors</nav-list-header>
+          <nav-breadcrumbs color="secondary">
+            <nav-breadcrumb href="#"> Home </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics"> Electronics </nav-breadcrumb>
+            <nav-breadcrumb href="#photography"> Photography </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Icons - Start</nav-list-header>
+          <nav-breadcrumbs>
+            <nav-breadcrumb href="#">
+              <nav-icon slot="start" name="home"></nav-icon>
+              Home
+            </nav-breadcrumb>
+            <nav-breadcrumb href="#files">
+              <nav-icon slot="start" name="folder"></nav-icon>
+              Files
+            </nav-breadcrumb>
+            <nav-breadcrumb href="#projects">
+              <nav-icon slot="start" name="folder"></nav-icon>
+              Projects
+            </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Icons - End</nav-list-header>
+          <nav-breadcrumbs>
+            <nav-breadcrumb href="#">
+              Home
+              <nav-icon slot="end" name="home"></nav-icon>
+            </nav-breadcrumb>
+            <nav-breadcrumb href="#files">
+              Files
+              <nav-icon slot="end" name="folder"></nav-icon>
+            </nav-breadcrumb>
+            <nav-breadcrumb href="#projects">
+              Projects
+              <nav-icon slot="end" name="folder"></nav-icon>
+            </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Custom Separator - Icon</nav-list-header>
+          <nav-breadcrumbs>
+            <nav-breadcrumb href="#">
+              Home
+              <nav-icon slot="separator" name="arrow-forward"></nav-icon>
+            </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics">
+              Electronics
+              <nav-icon slot="separator" name="arrow-forward"></nav-icon>
+            </nav-breadcrumb>
+            <nav-breadcrumb href="#photography">
+              Photography
+              <nav-icon slot="separator" name="arrow-forward"></nav-icon>
+            </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Max Items</nav-list-header>
+          <nav-breadcrumbs max-items="4">
+            <nav-breadcrumb href="#"> Home </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics"> Electronics </nav-breadcrumb>
+            <nav-breadcrumb href="#photography"> Photography </nav-breadcrumb>
+            <nav-breadcrumb href="#cameras"> Cameras </nav-breadcrumb>
+            <nav-breadcrumb href="#film"> Film </nav-breadcrumb>
+            <nav-breadcrumb> 35 mm </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Items Before Collapse</nav-list-header>
+          <nav-breadcrumbs max-items="4" items-before-collapse="2">
+            <nav-breadcrumb href="#"> Home </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics"> Electronics </nav-breadcrumb>
+            <nav-breadcrumb href="#photography"> Photography </nav-breadcrumb>
+            <nav-breadcrumb href="#cameras"> Cameras </nav-breadcrumb>
+            <nav-breadcrumb href="#film"> Film </nav-breadcrumb>
+            <nav-breadcrumb> 35 mm </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Items After Collapse</nav-list-header>
+          <nav-breadcrumbs max-items="4" items-after-collapse="3">
+            <nav-breadcrumb href="#"> Home </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics"> Electronics </nav-breadcrumb>
+            <nav-breadcrumb href="#photography"> Photography </nav-breadcrumb>
+            <nav-breadcrumb href="#cameras"> Cameras </nav-breadcrumb>
+            <nav-breadcrumb href="#film"> Film </nav-breadcrumb>
+            <nav-breadcrumb> 35 mm </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Items Before And After Collapse</nav-list-header>
+          <nav-breadcrumbs max-items="4" items-before-collapse="0" items-after-collapse="3">
+            <nav-breadcrumb href="#"> Home </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics"> Electronics </nav-breadcrumb>
+            <nav-breadcrumb href="#photography"> Photography </nav-breadcrumb>
+            <nav-breadcrumb href="#cameras"> Cameras </nav-breadcrumb>
+            <nav-breadcrumb href="#film"> Film </nav-breadcrumb>
+            <nav-breadcrumb> 35 mm </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Expand on Collapsed Indicator Click</nav-list-header>
+          <nav-breadcrumbs id="expand">
+            <nav-breadcrumb href="#"> Home </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics"> Electronics </nav-breadcrumb>
+            <nav-breadcrumb href="#photography"> Photography </nav-breadcrumb>
+            <nav-breadcrumb href="#cameras"> Cameras </nav-breadcrumb>
+            <nav-breadcrumb href="#film"> Film </nav-breadcrumb>
+            <nav-breadcrumb> 35 mm </nav-breadcrumb>
+          </nav-breadcrumbs>
+
+          <nav-popover alignment="center">
+            <nav-content>
+              <nav-list>
+                <nav-item href="#electronics">
+                  <nav-label>Electronics</nav-label>
+                </nav-item>
+                <nav-item href="#photography">
+                  <nav-label>Photography</nav-label>
+                </nav-item>
+                <nav-item href="#cameras">
+                  <nav-label>Cameras</nav-label>
+                </nav-item>
+                <nav-item href="#film">
+                  <nav-label>Film</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-content>
+          </nav-popover>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Popover on Collapsed Indicator Click</nav-list-header>
+          <nav-breadcrumbs max-items="4" id="popover">
+            <nav-breadcrumb href="#"> Home </nav-breadcrumb>
+            <nav-breadcrumb href="#electronics"> Electronics </nav-breadcrumb>
+            <nav-breadcrumb href="#photography"> Photography </nav-breadcrumb>
+            <nav-breadcrumb href="#cameras"> Cameras </nav-breadcrumb>
+            <nav-breadcrumb href="#film"> Film </nav-breadcrumb>
+            <nav-breadcrumb> 35 mm </nav-breadcrumb>
+          </nav-breadcrumbs>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      const expandBreadcrumb = document.querySelector('#expand');
+      const popoverBreadcrumb = document.querySelector('#popover');
+      const popover = document.querySelector('nav-popover');
+
+      expandBreadcrumb.maxItems = 4;
+      expandBreadcrumb.addEventListener('navCollapsedClick', () => {
+        expandBreadcrumb.maxItems = undefined;
+      });
+
+      popoverBreadcrumb.addEventListener('navCollapsedClick', (ev) => {
+        popover.present(ev);
+      });
+    </script>
+  </body>
+</html>

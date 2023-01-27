@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Label</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      display: block;
+    }
+  </style>
+</head>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-item>
+          <nav-label>Default Label</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item>
+          <nav-label position="fixed">Fixed Label</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item>
+          <nav-label position="floating">Floating Label</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item>
+          <nav-label position="stacked">Stacked Label</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item>
+          <nav-label>Toggle</nav-label>
+          <nav-toggle slot="end" checked></nav-toggle>
+        </nav-item>
+
+        <nav-item>
+          <nav-checkbox slot="start" checked></nav-checkbox>
+          <nav-label>Checkbox</nav-label>
+        </nav-item>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toolbar</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header>
+        <nav-toolbar>
+          <nav-title>Toolbar</nav-title>
+        </nav-toolbar>
+      </nav-header>
+      <nav-content fullscreen="true">
+        <nav-header collapse="condense">
+          <nav-toolbar>
+            <nav-title size="large">Toolbar</nav-title>
+          </nav-toolbar>
+          <nav-toolbar>
+            <nav-searchbar></nav-searchbar>
+          </nav-toolbar>
+        </nav-header>
+
+        <nav-toolbar>
+          <nav-buttons slot="start">
+            <nav-menu-button auto-hide="false"></nav-menu-button>
+          </nav-buttons>
+          <nav-buttons slot="primary">
+            <nav-button>
+              <nav-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></nav-icon>
+            </nav-button>
+          </nav-buttons>
+
+          <nav-title>Standard</nav-title>
+        </nav-toolbar>
+
+        <nav-toolbar>
+          <nav-buttons slot="start">
+            <nav-button> Clear </nav-button>
+          </nav-buttons>
+          <nav-buttons slot="end">
+            <nav-button> Done </nav-button>
+          </nav-buttons>
+
+          <nav-title>Buttons</nav-title>
+        </nav-toolbar>
+
+        <nav-toolbar>
+          <nav-segment value="all">
+            <nav-segment-button value="all">All</nav-segment-button>
+            <nav-segment-button value="favorites">Favorites</nav-segment-button>
+          </nav-segment>
+        </nav-toolbar>
+
+        <nav-toolbar>
+          <nav-title>Progress</nav-title>
+
+          <nav-progress-bar value=".4"></nav-progress-bar>
+        </nav-toolbar>
+
+        <nav-toolbar color="primary">
+          <nav-title>Primary</nav-title>
+        </nav-toolbar>
+
+        <nav-toolbar color="tertiary">
+          <nav-buttons slot="start">
+            <nav-button>
+              <nav-icon name="heart"></nav-icon>
+            </nav-button>
+          </nav-buttons>
+          <nav-buttons slot="end">
+            <nav-menu-button auto-hide="false"></nav-menu-button>
+          </nav-buttons>
+
+          <nav-title>Tertiary</nav-title>
+        </nav-toolbar>
+
+        <nav-toolbar color="danger">
+          <nav-buttons slot="start">
+            <nav-button>
+              <nav-icon name="star"></nav-icon>
+            </nav-button>
+          </nav-buttons>
+          <nav-buttons slot="end">
+            <nav-button>
+              <nav-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></nav-icon>
+            </nav-button>
+          </nav-buttons>
+
+          <nav-title>Danger</nav-title>
+        </nav-toolbar>
+      </nav-content>
+
+      <nav-footer>
+        <nav-toolbar>
+          <nav-title> Click to Add Text </nav-title>
+          <nav-buttons slot="end">
+            <nav-button id="changeText" onClick="toggleText()">
+              <nav-icon slot="start" name="refresh"></nav-icon>
+            </nav-button>
+          </nav-buttons>
+        </nav-toolbar>
+      </nav-footer>
+    </nav-app>
+  </body>
+</html>
+
+<style>
+  nav-content nav-toolbar {
+    margin: 10px 0;
+  }
+</style>

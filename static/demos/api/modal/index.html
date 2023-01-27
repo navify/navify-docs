@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@latest/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core@latest/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@latest/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+    <script type="module">
+      import { modalController } from 'https://cdn.jsdelivr.net/npm/@navify/core@latest/dist/navify/index.esm.js';
+      window.modalController = modalController;
+    </script>
+  </head>
+  <body>
+    <nav-app>
+      <div class="nav-page">
+        <nav-header translucent>
+          <nav-toolbar>
+            <nav-title>Modal</nav-title>
+          </nav-toolbar>
+        </nav-header>
+        <nav-content fullscreen class="nav-padding">
+          <nav-button expand="block" onclick="openModal()">Show Modal</nav-button>
+          <nav-button expand="block" onclick="openCardModal()">Show Card Modal</nav-button>
+          <nav-button expand="block" onclick="openSheetModal()">Show Sheet Modal</nav-button>
+        </nav-content>
+      </div>
+    </nav-app>
+
+    <script>
+      const pageEl = document.querySelector('.nav-page');
+      customElements.define(
+        'modal-content',
+        class ModalContent extends HTMLElement {
+          connectedCallback() {
+            this.innerHTML = `
+          <nav-header translucent>
+            <nav-toolbar>
+              <nav-title>Modal Content</nav-title>
+              <nav-buttons slot="end">
+                <nav-button onclick="dismissModal()">Close</nav-button>
+              </nav-buttons>
+            </nav-toolbar>
+          </nav-header>
+          <nav-content fullscreen>
+            <nav-list>
+              <nav-item>
+                <nav-avatar slot="start">
+                  <nav-img src="./avatar-gollum.jpg"/>
+                </nav-avatar>
+                <nav-label>
+                  <h2>Gollum</h2>
+                  <p>Sneaky little hobbitses!</p>
+                </nav-label>
+              </nav-item>
+              <nav-item>
+                <nav-avatar slot="start">
+                  <nav-img src="./avatar-frodo.jpg"/>
+                </nav-avatar>
+                <nav-label>
+                  <h2>Frodo</h2>
+                  <p>Go back, Sam! I'm going to Mordor alone!</p>
+                </nav-label>
+              </nav-item>
+              <nav-item>
+                <nav-avatar slot="start">
+                  <nav-img src="./avatar-samwise.jpg"/>
+                </nav-avatar>
+                <nav-label>
+                  <h2>Samwise</h2>
+                  <p>What we need is a few good taters.</p>
+                </nav-label>
+              </nav-item>
+            </nav-list>
+          </nav-content>
+        `;
+          }
+        }
+      );
+
+      let currentModal = null;
+      async function openModal(opts = {}) {
+        const modal = await modalController.create({
+          component: 'modal-content',
+          ...opts,
+        });
+        modal.present();
+
+        currentModal = modal;
+      }
+
+      function openSheetModal() {
+        openModal({
+          breakpoints: [0, 0.2, 0.5, 1],
+          initialBreakpoint: 0.2,
+        });
+      }
+
+      function openCardModal() {
+        openModal({
+          swipeToClose: true,
+          presentingElement: pageEl,
+        });
+      }
+
+      function dismissModal() {
+        if (currentModal) {
+          currentModal.dismiss().then(() => {
+            currentModal = null;
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

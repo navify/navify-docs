@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Checkbox</nav-title>
+        </nav-toolbar>
+      </nav-header>
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-list-header>Characters</nav-list-header>
+          <nav-item>
+            <nav-label>Jon Snow</nav-label>
+            <nav-checkbox color="primary" checked slot="start"></nav-checkbox>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="dark" checked slot="start"></nav-checkbox>
+            <nav-label>Daenerys Targaryen</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox disabled slot="start"></nav-checkbox>
+            <nav-label>Arya Stark</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="secondary" slot="start"></nav-checkbox>
+            <nav-label>Tyrion Lannister</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="danger" checked slot="start"></nav-checkbox>
+            <nav-label>Sansa Stark</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="primary" slot="start"></nav-checkbox>
+            <nav-label>Khal Drogo</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="tertiary" checked slot="start"></nav-checkbox>
+            <nav-label>Cersei Lannister</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="medium" checked slot="start"></nav-checkbox>
+            <nav-label>Stannis Baratheon</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="primary" disabled slot="start"></nav-checkbox>
+            <nav-label>Petyr Baelish</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="dark" checked slot="start"></nav-checkbox>
+            <nav-label>Hodor</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="secondary" checked slot="start"></nav-checkbox>
+            <nav-label>Catelyn Stark</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-checkbox color="primary" slot="start"></nav-checkbox>
+            <nav-label>Bronn</nav-label>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-list {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>
+          <nav-item>
+            <nav-label position="stacked">Input with clear button</nav-label>
+            <nav-input clear-input="true" placeholder="Enter text to see clear button" value="Default value"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label position="stacked">Input with clear on edit</nav-label>
+            <nav-input clear-on-edit="true" placeholder="Enter text, leave the input, come back and type to clear"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label position="stacked">Password input</nav-label>
+            <nav-input type="password" placeholder="Enter text, leave the input, come back and type to clear"></nav-input>
+          </nav-item>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

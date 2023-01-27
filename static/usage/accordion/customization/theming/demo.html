@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../../../common.css" />
+    <script src="../../../common.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-color-rose: #fecdd3;
+        --nav-color-rose-rgb: 254,205,211;
+        --nav-color-rose-contrast: #000000;
+        --nav-color-rose-contrast-rgb: 0,0,0;
+        --nav-color-rose-shade: #e0b4ba;
+        --nav-color-rose-tint: #fed2d7;
+      }
+
+      .nav-color-rose {
+        --nav-color-base: var(--nav-color-rose);
+        --nav-color-base-rgb: var(--nav-color-rose-rgb);
+        --nav-color-contrast: var(--nav-color-rose-contrast);
+        --nav-color-contrast-rgb: var(--nav-color-rose-contrast-rgb);
+        --nav-color-shade: var(--nav-color-rose-shade);
+        --nav-color-tint: var(--nav-color-rose-tint);
+      }
+
+      div[slot="content"] {
+        background: rgba(var(--nav-color-rose-rgb), 0.25)
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-content>
+        <div class="container">
+          <nav-accordion-group expand="inset">
+            <nav-accordion value="first">
+              <nav-item slot="header" color="rose">
+                <nav-label>First Accordion</nav-label>
+              </nav-item>
+              <div class="nav-padding" slot="content">
+                First Content
+              </div>
+            </nav-accordion>
+            <nav-accordion value="second">
+              <nav-item slot="header" color="rose">
+                <nav-label>Second Accordion</nav-label>
+              </nav-item>
+              <div class="nav-padding" slot="content">
+                Second Content
+              </div>
+            </nav-accordion>
+            <nav-accordion value="third">
+              <nav-item slot="header" color="rose">
+                <nav-label>Third Accordion</nav-label>
+              </nav-item>
+              <div class="nav-padding" slot="content">
+                Third Content
+              </div>
+            </nav-accordion>
+          </nav-accordion-group>
+        </div>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

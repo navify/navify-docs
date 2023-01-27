@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radio</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-list {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>
+          <nav-radio-group allow-empty-selection="true" value="turtles">
+            <nav-item>
+              <nav-label>Dogs</nav-label>
+              <nav-radio slot="end" value="dogs"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Cats</nav-label>
+              <nav-radio slot="end" value="cats"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Turtles</nav-label>
+              <nav-radio slot="end" value="turtles"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Fish</nav-label>
+              <nav-radio slot="end" value="fish"></nav-radio>
+            </nav-item>
+          </nav-radio-group>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

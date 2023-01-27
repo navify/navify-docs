@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thumbnail</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Thumbnail</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list-header>Default</nav-list-header>
+        <nav-thumbnail class="nav-margin-start">
+          <img src="./thumbnail.svg" />
+        </nav-thumbnail>
+
+        <nav-list>
+          <nav-list-header>Item thumbnails</nav-list-header>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./thumbnail.svg" />
+            </nav-thumbnail>
+            <nav-label>Lorem ipsum</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./thumbnail.svg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Lorem ipsum</h3>
+              <p>dolor sit amet</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./thumbnail.svg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Lorem ipsum</h3>
+              <p>dolor sit amet</p>
+              <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="end">
+              <img src="./thumbnail.svg" />
+            </nav-thumbnail>
+            <nav-label>Lorem ipsum</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="end">
+              <img src="./thumbnail.svg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Lorem ipsum</h3>
+              <p>dolor sit amet</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="end">
+              <img src="./thumbnail.svg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Lorem ipsum</h3>
+              <p>dolor sit amet</p>
+              <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+            </nav-label>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

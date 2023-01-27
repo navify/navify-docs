@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Searchbar</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-flow: column;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-searchbar></nav-searchbar>
+        <nav-searchbar placeholder="Custom Placeholder"></nav-searchbar>
+        <nav-searchbar disabled="true" placeholder="Disabled"></nav-searchbar>
+        <nav-searchbar value="Value"></nav-searchbar>
+        <nav-searchbar animated="true" placeholder="Animated"></nav-searchbar>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

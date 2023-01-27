@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back Button</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-nav root="nav-home"></nav-nav>
+    </nav-app>
+
+    <script>
+      customElements.define(
+        'nav-home',
+        class NavHome extends HTMLElement {
+          connectedCallback() {
+            this.innerHTML = `
+          <nav-header translucent>
+            <nav-toolbar>
+              <nav-title>Back Button</nav-title>
+            </nav-toolbar>
+          </nav-header>
+          <nav-content fullscreen>
+            <nav-list>
+            <nav-item onclick="navigateForward()">
+              Navigate Forward
+            </nav-item>
+            </nav-list>
+          </nav-content>
+        `;
+          }
+        }
+      );
+
+      const nav = document.querySelector('nav-nav');
+
+      function navigateForward() {
+        nav.push('nav-detail');
+      }
+
+      customElements.define(
+        'nav-detail',
+        class NavDetail extends HTMLElement {
+          connectedCallback() {
+            this.innerHTML = `
+          <nav-header translucent>
+            <nav-toolbar>
+              <nav-buttons slot="start">
+                <nav-back-button defaultHref="/"></nav-back-button>
+              </nav-buttons>
+              <nav-title>Page Two</nav-title>
+            </nav-toolbar>
+          </nav-header>
+          <nav-content fullscreen class="nav-padding">
+            <p>Back-Button is displayed when there is history</p>
+          </nav-content>
+        `;
+          }
+        }
+      );
+    </script>
+  </body>
+</html>

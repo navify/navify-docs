@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-direction: column;
+    }
+
+    nav-item {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-item counter="true">
+          <nav-label position="floating">Default Counter</nav-label>
+          <nav-input maxlength="20"></nav-input>
+        </nav-item>
+
+        <nav-item id="custom-item" counter="true">
+          <nav-label position="floating">Custom Counter Format</nav-label>
+          <nav-input maxlength="20"></nav-input>
+        </nav-item>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+<script>
+  const customItem = document.querySelector('#custom-item');
+  customItem.counterFormatter = (inputLength, maxLength) => `${maxLength - inputLength} characters remaining`;
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popover</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-button id="click-trigger">Left-Click Me</nav-button>
+        <nav-popover trigger="click-trigger" trigger-action="click">
+          <nav-content class="nav-padding">Hello World!</nav-content>
+        </nav-popover>
+
+        <nav-button id="context-menu-trigger">Right-Click Me</nav-button>
+        <nav-popover trigger="context-menu-trigger" trigger-action="context-menu">
+          <nav-content class="nav-padding">Hello World!</nav-content>
+        </nav-popover>
+
+        <nav-button id="hover-trigger">Hover Over Me</nav-button>
+        <nav-popover trigger="hover-trigger" trigger-action="hover">
+          <nav-content class="nav-padding">Hello World!</nav-content>
+        </nav-popover>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

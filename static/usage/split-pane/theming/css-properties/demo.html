@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spinner</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+  <style>
+    nav-split-pane {
+      --side-width: 350px;
+      --side-max-width: 350px;
+
+      --border: 1px dashed #b3baff;
+    }
+  </style>
+</head>
+  <body>
+    <nav-app>
+      <nav-split-pane when="xs" content-id="main">
+        <nav-menu content-id="main">
+          <nav-header>
+            <nav-toolbar color="tertiary">
+              <nav-title>Menu</nav-title>
+            </nav-toolbar>
+          </nav-header>
+          <nav-content class="nav-padding">
+            Menu Content is 350px wide and has a blue dashed border
+          </nav-content>
+        </nav-menu>
+
+        <div class="nav-page" id="main">
+          <nav-header>
+            <nav-toolbar>
+              <nav-title>Main View</nav-title>
+            </nav-toolbar>
+          </nav-header>
+          <nav-content class="nav-padding">
+            Main View Content
+          </nav-content>
+        </div>
+      </nav-split-pane>
+    </nav-app>
+  </body>
+</html>

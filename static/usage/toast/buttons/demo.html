@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toast</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-direction: column;
+    }
+
+    .container p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-header>
+      <nav-toolbar>
+        <nav-title>Toast</nav-title>
+      </nav-toolbar>
+    </nav-header>
+    <nav-content>
+      <div class="container">
+        <nav-button onclick="presentToast()">Click Me</nav-button>
+        <p id="handlerResult"></p>
+        <p id="roleResult"></p>
+      </div>
+    </nav-content>
+  </nav-app>
+
+  <script type="module">
+    import { toastController } from 'https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/index.esm.js';
+    window.toastController = toastController;
+  </script>
+
+  <script>
+    const handlerOutput = document.querySelector('#handlerResult');
+    const roleOutput = document.querySelector('#roleResult');
+
+    async function presentToast() {
+      const toast = await toastController.create({
+        message: 'Hello World!',
+        duration: 3000,
+        buttons: [
+          {
+            text: 'More Info',
+            role: 'info',
+            handler: () => { handlerOutput.innerText = 'More Info clicked'; }
+          },
+          {
+            text: 'Dismiss',
+            role: 'cancel',
+            handler: () => { handlerOutput.innerText = 'Dismiss clicked'; }
+          }
+        ]
+      });
+
+      await toast.present();
+
+      const { role } = await toast.onDidDismiss();
+      roleOutput.innerText = `Dismissed with role: ${role}`;
+    }
+  </script>
+</body>
+
+</html>

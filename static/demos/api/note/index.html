@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Note</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-list-header>Basic</nav-list-header>
+          <nav-grid>
+            <nav-row>
+              <nav-col>
+                <nav-note>Default</nav-note>
+              </nav-col>
+              <nav-col>
+                <nav-note color="primary">Primary</nav-note>
+              </nav-col>
+              <nav-col>
+                <nav-note color="secondary">Secondary</nav-note>
+              </nav-col>
+              <nav-col>
+                <nav-note color="tertiary">Tertiary</nav-note>
+              </nav-col>
+            </nav-row>
+            <nav-row>
+              <nav-col>
+                <nav-note color="success">Success</nav-note>
+              </nav-col>
+              <nav-col>
+                <nav-note color="warning">warning</nav-note>
+              </nav-col>
+              <nav-col>
+                <nav-note color="danger">Danger</nav-note>
+              </nav-col>
+              <nav-col>
+                <nav-note color="dark">Dark</nav-note>
+              </nav-col>
+            </nav-row>
+          </nav-grid>
+
+          <nav-list-header>List Notes</nav-list-header>
+          <nav-item>
+            <nav-label>Default</nav-label>
+            <nav-note slot="end">11</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Primary</nav-label>
+            <nav-note slot="end" color="primary">22</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Secondary</nav-label>
+            <nav-note slot="end" color="secondary">33</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Tertiary</nav-label>
+            <nav-note slot="end" color="tertiary">44</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Success</nav-label>
+            <nav-note slot="start" color="success">55</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Warning</nav-label>
+            <nav-note slot="start" color="warning">66</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Danger</nav-label>
+            <nav-note slot="start" color="danger">77</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Dark</nav-label>
+            <nav-note slot="start" color="dark">88</nav-note>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+
+    <style>
+      nav-grid {
+        padding-left: 9px;
+      }
+
+      nav-row {
+        margin-bottom: 10px;
+      }
+    </style>
+  </body>
+</html>

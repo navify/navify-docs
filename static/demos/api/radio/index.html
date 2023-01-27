@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Radio</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-radio-group value="grape">
+            <nav-list-header>
+              <nav-label>Fruit</nav-label>
+            </nav-list-header>
+            <nav-item>
+              <nav-label>Apple</nav-label>
+              <nav-radio slot="start" color="success" value="apple"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Grape</nav-label>
+              <nav-radio slot="start" color="tertiary" value="grape"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Cherry</nav-label>
+              <nav-radio slot="start" color="danger" value="cherry"></nav-radio>
+            </nav-item>
+          </nav-radio-group>
+
+          <nav-radio-group allow-empty-selection value="anchovies">
+            <nav-list-header>
+              <nav-label>Pizza Topping</nav-label>
+            </nav-list-header>
+            <nav-item>
+              <nav-label>Beef</nav-label>
+              <nav-radio slot="end" color="primary" value="beef"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Anchovies</nav-label>
+              <nav-radio slot="end" color="secondary" value="anchovies"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Sausage</nav-label>
+              <nav-radio slot="end" color="tertiary" value="sausage"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Bellpepper</nav-label>
+              <nav-radio slot="end" color="success" value="tomato"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Tomato</nav-label>
+              <nav-radio slot="end" color="warning" value="carrot"></nav-radio>
+            </nav-item>
+
+            <nav-item>
+              <nav-label>Pepperoni</nav-label>
+              <nav-radio slot="end" color="danger" value="pepperoni"></nav-radio>
+            </nav-item>
+          </nav-radio-group>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

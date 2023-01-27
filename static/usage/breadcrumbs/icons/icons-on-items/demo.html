@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breadcrumbs</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-label>Icons at Start</nav-label>
+        <nav-breadcrumbs>
+          <nav-breadcrumb href="#home">
+            <nav-icon slot="start" name="home"></nav-icon>
+            Home
+          </nav-breadcrumb>
+          <nav-breadcrumb href="#electronics">
+            <nav-icon slot="start" name="flash"></nav-icon>
+            Electronics
+          </nav-breadcrumb>
+          <nav-breadcrumb href="#cameras">
+            <nav-icon slot="start" name="camera"></nav-icon>
+            Cameras
+          </nav-breadcrumb>
+          <nav-breadcrumb href="#film">
+            <nav-icon slot="start" name="film"></nav-icon>
+            Film
+          </nav-breadcrumb>
+        </nav-breadcrumbs>
+
+        <nav-label class="nav-margin-top">Icons at End</nav-label>
+        <nav-breadcrumbs>
+          <nav-breadcrumb href="#home">
+            Home
+            <nav-icon slot="end" name="home"></nav-icon>
+          </nav-breadcrumb>
+          <nav-breadcrumb href="#electronics">
+            Electronics
+            <nav-icon slot="end" name="flash"></nav-icon>
+          </nav-breadcrumb>
+          <nav-breadcrumb href="#cameras">
+            Cameras
+            <nav-icon slot="end" name="camera"></nav-icon>
+          </nav-breadcrumb>
+          <nav-breadcrumb href="#film">
+            Film
+            <nav-icon slot="end" name="film"></nav-icon>
+          </nav-breadcrumb>
+        </nav-breadcrumbs>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

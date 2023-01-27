@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Searchbar</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-flow: column;
+    }
+
+    nav-searchbar.custom {
+      --background: #19422d;
+      --color: #fff;
+      --placeholder-color: #fff;
+      --icon-color: #fff;
+      --clear-button-color: #fff;
+
+      --border-radius: 4px;
+    }
+
+    nav-searchbar.ios.custom {
+      --cancel-button-color: #19422d;
+    }
+
+    nav-searchbar.md.custom {
+      --cancel-button-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-searchbar show-cancel-button="focus" class="custom"></nav-searchbar>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

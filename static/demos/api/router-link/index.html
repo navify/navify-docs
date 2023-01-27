@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Router Link</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Router Link</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen class="nav-padding">
+        <nav-list-header>Colors</nav-list-header>
+        <nav-grid>
+          <nav-row>
+            <nav-col>
+              <nav-router-link href="#">Default</nav-router-link>
+            </nav-col>
+            <nav-col>
+              <nav-router-link color="secondary" href="#">Secondary</nav-router-link>
+            </nav-col>
+            <nav-col>
+              <nav-router-link color="tertiary" href="#">Tertiary</nav-router-link>
+            </nav-col>
+          </nav-row>
+
+          <nav-row>
+            <nav-col>
+              <nav-router-link color="success" href="#">Success</nav-router-link>
+            </nav-col>
+            <nav-col>
+              <nav-router-link color="warning" href="#">Warning</nav-router-link>
+            </nav-col>
+            <nav-col>
+              <nav-router-link color="danger" href="#">Danger</nav-router-link>
+            </nav-col>
+          </nav-row>
+
+          <nav-row>
+            <nav-col>
+              <nav-router-link color="light" href="#">Light</nav-router-link>
+            </nav-col>
+            <nav-col>
+              <nav-router-link color="medium" href="#">Medium</nav-router-link>
+            </nav-col>
+            <nav-col>
+              <nav-router-link color="dark" href="#">Dark</nav-router-link>
+            </nav-col>
+          </nav-row>
+        </nav-grid>
+
+        <nav-list-header>Custom Styles</nav-list-header>
+
+        <nav-grid>
+          <nav-row>
+            <nav-col>
+              <nav-router-link href="#" class="underline">Underline</nav-router-link>
+            </nav-col>
+            <nav-col>
+              <nav-router-link href="#" class="spacing">Spacing</nav-router-link>
+            </nav-col>
+          </nav-row>
+          <nav-row>
+            <nav-col>
+              <nav-router-link href="#" class="uppercase">Uppercase</nav-router-link>
+            </nav-col>
+            <nav-col>
+              <nav-router-link href="#" class="color">Magenta</nav-router-link>
+            </nav-col>
+          </nav-row>
+        </nav-grid>
+      </nav-content>
+
+      <style>
+        nav-list-header {
+          padding-left: 10px;
+        }
+
+        nav-row {
+          margin-bottom: 15px;
+        }
+
+        .underline {
+          text-decoration: underline;
+        }
+
+        .spacing {
+          letter-spacing: 5px;
+        }
+
+        .uppercase {
+          text-transform: uppercase;
+        }
+
+        .color {
+          color: magenta;
+        }
+      </style>
+    </nav-app>
+  </body>
+</html>

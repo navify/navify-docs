@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badge</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Badge</nav-title>
+        </nav-toolbar> </nav-header
+      >,
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-list-header>Badges</nav-list-header>
+          <nav-item>
+            <nav-label>Followers</nav-label>
+            <nav-badge slot="end">22k</nav-badge>
+          </nav-item>
+          <nav-item>
+            <nav-label>Likes</nav-label>
+            <nav-badge color="secondary" slot="end">118k</nav-badge>
+          </nav-item>
+          <nav-item>
+            <nav-label>Stars</nav-label>
+            <nav-badge color="tertiary" slot="end">34k</nav-badge>
+          </nav-item>
+          <nav-item>
+            <nav-label>Completed</nav-label>
+            <nav-badge color="success" slot="end">80</nav-badge>
+          </nav-item>
+          <nav-item>
+            <nav-label>Warnings</nav-label>
+            <nav-badge color="warning" slot="end">70</nav-badge>
+          </nav-item>
+          <nav-item>
+            <nav-label>Notifications</nav-label>
+            <nav-badge color="danger" slot="end">1000</nav-badge>
+          </nav-item>
+          <nav-item>
+            <nav-label>Unread</nav-label>
+            <nav-badge color="light" slot="end">24</nav-badge>
+          </nav-item>
+          <nav-item>
+            <nav-label>Drafts</nav-label>
+            <nav-badge color="medium" slot="end">14</nav-badge>
+          </nav-item>
+          <nav-item>
+            <nav-label>Deleted</nav-label>
+            <nav-badge color="dark" slot="end">4</nav-badge>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

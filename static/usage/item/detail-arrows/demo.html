@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-item detail="true">
+          <nav-label>
+            <h3>Text Item</h3>
+            <p>Detail set to true - detail arrow displays on both modes</p>
+          </nav-label>
+        </nav-item>
+
+        <nav-item button>
+          <nav-label>
+            <h3>Button Item</h3>
+            <p>Default detail - detail arrow displays on iOS only</p>
+          </nav-label>
+        </nav-item>
+
+        <nav-item button detail="true">
+          <nav-label>
+            <h3>Button Item</h3>
+            <p>Detail set to true - detail arrow displays on both modes</p>
+          </nav-label>
+        </nav-item>
+
+        <nav-item button detail="false">
+          <nav-label>
+            <h3>Button Item</h3>
+            <p>Detail set to false - detail arrow hidden on both modes</p>
+          </nav-label>
+        </nav-item>
+
+        <nav-item button detail="true" detail-icon="caret-forward-outline">
+          <nav-label>
+            <h3>Button Item</h3>
+            <p>Detail set to true - detail arrow displays on both modes</p>
+            <p>Detail icon set to caret-forward-outline</p>
+          </nav-label>
+        </nav-item>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

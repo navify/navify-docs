@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datetime</title>
+    <link rel="stylesheet" href="../../../common.css" />
+    <script src="../../../common.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+    <style>
+      nav-datetime {
+        width: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-content>
+        <div class="container">
+          <nav-datetime></nav-datetime>
+        </div>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      const datetime = document.querySelector('nav-datetime');
+      datetime.isDateEnabled = (dateString) => {
+        const date = new Date(dateString);
+        const utcDay = date.getUTCDay();
+
+        /**
+         * Date will be enabled if it is not
+         * Sunday or Saturday
+         */
+        return utcDay !== 0 && utcDay !== 6;
+      }
+    </script>
+  </body>
+</html>

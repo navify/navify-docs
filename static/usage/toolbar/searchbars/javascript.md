@@ -1,0 +1,10 @@
+```html
+<nav-header>
+  <nav-toolbar>
+    <nav-title>Toolbar</nav-title>
+  </nav-toolbar>
+  <nav-toolbar>
+    <nav-searchbar></nav-searchbar>
+  </nav-toolbar>
+</nav-header>
+```

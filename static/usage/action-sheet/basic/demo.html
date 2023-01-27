@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Action Sheet</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-direction: column;
+    }
+
+    code {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-button onclick="presentActionSheet()">Open</nav-button>
+        <code id="action"></code>
+      </div>
+    </nav-content>
+  </nav-app>
+  <script>
+    const action = document.getElementById('action');
+
+    async function presentActionSheet() {
+      const actionSheet = document.createElement('nav-action-sheet');
+      actionSheet.header = 'Example header';
+      actionSheet.subHeader = 'Example subheader';
+      actionSheet.buttons = [{
+        text: 'Delete',
+        role: 'destructive',
+        data: {
+          action: 'delete'
+        }
+      },
+      {
+        text: 'Share',
+        data: {
+          action: 'share'
+        }
+      },
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        data: {
+          action: 'cancel'
+        }
+      }];
+
+      document.body.appendChild(actionSheet);
+      await actionSheet.present();
+
+      const result = await actionSheet.onDidDismiss();
+      action.innerText = JSON.stringify(result, null, 2);
+    }
+  </script>
+</body>
+
+</html>

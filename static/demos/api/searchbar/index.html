@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searchbar</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Searchbar</nav-title>
+        </nav-toolbar>
+        <nav-toolbar>
+          <nav-searchbar></nav-searchbar>
+        </nav-toolbar>
+      </nav-header>
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-item>Amsterdam</nav-item>
+          <nav-item>Bogota</nav-item>
+          <nav-item>Buenos Aires</nav-item>
+          <nav-item>Cairo</nav-item>
+          <nav-item>Dhaka</nav-item>
+          <nav-item>Edinburgh</nav-item>
+          <nav-item>Geneva</nav-item>
+          <nav-item>Genoa</nav-item>
+          <nav-item>Glasgow</nav-item>
+          <nav-item>Hanoi</nav-item>
+          <nav-item>Hong Kong</nav-item>
+          <nav-item>Islamabad</nav-item>
+          <nav-item>Istanbul</nav-item>
+          <nav-item>Jakarta</nav-item>
+          <nav-item>Kiel</nav-item>
+          <nav-item>Kyoto</nav-item>
+          <nav-item>Le Havre</nav-item>
+          <nav-item>Lebanon</nav-item>
+          <nav-item>Lhasa</nav-item>
+          <nav-item>Lima</nav-item>
+          <nav-item>London</nav-item>
+          <nav-item>Los Angeles</nav-item>
+          <nav-item>Madrid</nav-item>
+          <nav-item>Manila</nav-item>
+          <nav-item>New York</nav-item>
+          <nav-item>Olympia</nav-item>
+          <nav-item>Oslo</nav-item>
+          <nav-item>Panama City</nav-item>
+          <nav-item>Peking</nav-item>
+          <nav-item>Philadelphia</nav-item>
+          <nav-item>San Francisco</nav-item>
+          <nav-item>Seoul</nav-item>
+          <nav-item>Taipeh</nav-item>
+          <nav-item>Tel Aviv</nav-item>
+          <nav-item>Tokio</nav-item>
+          <nav-item>Uelzen</nav-item>
+          <nav-item>Washington</nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      const searchbar = document.querySelector('nav-searchbar');
+      const items = Array.from(document.querySelector('nav-list').children);
+
+      searchbar.addEventListener('navInput', handleInput);
+
+      function handleInput(event) {
+        const query = event.target.value.toLowerCase();
+        requestAnimationFrame(() => {
+          items.forEach((item) => {
+            const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
+            item.style.display = shouldShow ? 'block' : 'none';
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

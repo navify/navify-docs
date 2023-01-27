@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select - Styling the Select</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-select {
+      --placeholder-color: #971e49;
+      --placeholder-opacity: 1;
+      width: 100%;
+      justify-content: center;
+    }
+
+    nav-select::part(placeholder),
+    nav-select::part(text) {
+      flex: 0 0 auto;
+    }
+
+    nav-select::part(placeholder)::first-letter {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    nav-select::part(text) {
+      color: #545ca7;
+    }
+
+    nav-select::part(icon) {
+      color: #971e49;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>
+          <nav-item>
+            <nav-select placeholder="Select fruit">
+              <nav-select-option value="apples">Apples</nav-select-option>
+              <nav-select-option value="oranges">Oranges</nav-select-option>
+              <nav-select-option value="bananas">Bananas</nav-select-option>
+            </nav-select>
+          </nav-item>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

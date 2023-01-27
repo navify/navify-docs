@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Segment</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      display: grid;
+    }
+
+    nav-segment {
+      width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-segment scrollable value="heart">
+          <nav-segment-button value="home">
+            <nav-icon name="home"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="heart">
+            <nav-icon name="heart"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="pin">
+            <nav-icon name="pin"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="star">
+            <nav-icon name="star"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="call">
+            <nav-icon name="call"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="globe">
+            <nav-icon name="globe"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="basket">
+            <nav-icon name="basket"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="barbell">
+            <nav-icon name="barbell"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="trash">
+            <nav-icon name="trash"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="person">
+            <nav-icon name="person"></nav-icon>
+          </nav-segment-button>
+        </nav-segment>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

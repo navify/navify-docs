@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="../../common.css" />
+    <script src="../../common.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+  </head>
+  <body>
+    <nav-app>
+      <nav-menu content-id="main-content">
+        <nav-header>
+          <nav-toolbar>
+            <nav-title>Menu Content</nav-title>
+          </nav-toolbar>
+        </nav-header>
+        <nav-content class="nav-padding">This is the menu content.</nav-content>
+      </nav-menu>
+      <div class="nav-page" id="main-content">
+        <nav-header>
+          <nav-toolbar>
+            <nav-buttons slot="start">
+              <nav-menu-button></nav-menu-button>
+            </nav-buttons>
+            <nav-title>Menu</nav-title>
+          </nav-toolbar>
+        </nav-header>
+        <nav-content class="nav-padding">
+          Tap the button in the toolbar to open the menu.
+        </nav-content>
+      </div>
+    </nav-app>
+  </body>
+</html>

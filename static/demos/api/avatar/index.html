@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avatar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Avatar</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list-header>Default</nav-list-header>
+        <nav-avatar class="nav-margin-start">
+          <img src="./avatar.svg" />
+        </nav-avatar>
+
+        <nav-list-header>Chip Avatar</nav-list-header>
+        <nav-chip class="nav-margin-start">
+          <nav-avatar>
+            <img src="./avatar.svg" />
+          </nav-avatar>
+          <nav-label>Kit Bishop</nav-label>
+        </nav-chip>
+
+        <nav-list>
+          <nav-list-header>Item Avatars</nav-list-header>
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar.svg" />
+            </nav-avatar>
+            <nav-label>Lorem ipsum</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar.svg" />
+            </nav-avatar>
+            <nav-label>
+              <h3>Lorem ipsum</h3>
+              <p>dolor sit amet</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar.svg" />
+            </nav-avatar>
+            <nav-label>
+              <h3>Lorem ipsum</h3>
+              <p>dolor sit amet</p>
+              <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-avatar slot="end">
+              <img src="./avatar.svg" />
+            </nav-avatar>
+            <nav-label>Lorem ipsum</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-avatar slot="end">
+              <img src="./avatar.svg" />
+            </nav-avatar>
+            <nav-label>
+              <h3>Lorem ipsum</h3>
+              <p>dolor sit amet</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-avatar slot="end">
+              <img src="./avatar.svg" />
+            </nav-avatar>
+            <nav-label>
+              <h3>Lorem ipsum</h3>
+              <p>dolor sit amet</p>
+              <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+            </nav-label>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

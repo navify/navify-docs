@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal | Custom Dialog</title>
+    <link rel="stylesheet" href="../../common.css" />
+    <script src="../../common.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+    <style>
+      nav-modal {
+        --width: fit-content;
+        --min-width: 250px;
+        --height: fit-content;
+        --border-radius: 6px;
+        --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+      }
+
+      nav-modal h1 {
+        margin: 20px 20px 10px 20px;
+      }
+
+      nav-modal nav-icon {
+        margin-right: 6px;
+
+        width: 48px;
+        height: 48px;
+
+        padding: 4px 0;
+
+        color: #aaaaaa;
+      }
+
+      nav-modal .wrapper {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header>
+        <nav-toolbar>
+          <nav-title>App</nav-title>
+        </nav-toolbar>
+      </nav-header>
+      <nav-content class="nav-padding">
+        <nav-button id="custom-modal" expand="block">Open Custom Dialog</nav-button>
+
+        <nav-modal trigger="custom-modal">
+          <div class="wrapper">
+            <h1>Dialog header</h1>
+
+            <nav-list lines="none">
+              <nav-item button="true" detail="false" onclick="dismiss()">
+                <nav-icon name="person-circle"></nav-icon>
+                <nav-label>Item 1</nav-label>
+              </nav-item>
+              <nav-item button="true" detail="false" onclick="dismiss()">
+                <nav-icon name="person-circle"></nav-icon>
+                <nav-label>Item 2</nav-label>
+              </nav-item>
+              <nav-item button="true" detail="false" onclick="dismiss()">
+                <nav-icon name="person-circle"></nav-icon>
+                <nav-label>Item 3</nav-label>
+              </nav-item>
+            </nav-list>
+          </div>
+        </nav-modal>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      const modal = document.querySelector('nav-modal');
+      const dismiss = () => modal.dismiss();
+    </script>
+  </body>
+
+</html>

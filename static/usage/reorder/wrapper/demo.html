@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reorder</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-list {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>
+          <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
+          <nav-reorder-group disabled="false">
+            <nav-reorder>
+              <nav-item>
+                <nav-label>
+                  Item 1
+                </nav-label>
+              </nav-item>
+            </nav-reorder>
+
+            <nav-reorder>
+              <nav-item>
+                <nav-label>
+                  Item 2
+                </nav-label>
+              </nav-item>
+            </nav-reorder>
+
+            <nav-reorder>
+              <nav-item>
+                <nav-label>
+                  Item 3
+                </nav-label>
+              </nav-item>
+            </nav-reorder>
+
+            <nav-reorder>
+              <nav-item>
+                <nav-label>
+                  Item 4
+                </nav-label>
+              </nav-item>
+            </nav-reorder>
+
+            <nav-reorder>
+              <nav-item>
+                <nav-label>
+                  Item 5
+                </nav-label>
+              </nav-item>
+            </nav-reorder>
+          </nav-reorder-group>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+
+  <script>
+    const reorderGroup = document.querySelector('nav-reorder-group');
+
+    reorderGroup.addEventListener('navItemReorder', ({detail}) => {
+      // The `from` and `to` properties contain the index of the item
+      // when the drag started and ended, respectively
+      console.log('Dragged from index', detail.from, 'to', detail.to);
+
+      // Finish the reorder and position the item in the DOM based on
+      // where the gesture ended. This method can also be called directly
+      // by the reorder group
+      detail.complete();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spinner</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Spinner</nav-title>
+        </nav-toolbar>
+      </nav-header>
+      <nav-content>
+        <nav-list>
+          <nav-item>
+            <nav-label>Default</nav-label>
+            <nav-spinner></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Lines</nav-label>
+            <nav-spinner name="lines"></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Lines Small</nav-label>
+            <nav-spinner name="lines-small"></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Dots</nav-label>
+            <nav-spinner name="dots"></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Bubbles</nav-label>
+            <nav-spinner name="bubbles"></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Circles</nav-label>
+            <nav-spinner name="circles"></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Crescent</nav-label>
+            <nav-spinner name="crescent"></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Paused</nav-label>
+            <nav-spinner paused></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Primary</nav-label>
+            <nav-spinner color="primary"></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Secondary</nav-label>
+            <nav-spinner color="secondary"></nav-spinner>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Tertiary</nav-label>
+            <nav-spinner color="tertiary"></nav-spinner>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

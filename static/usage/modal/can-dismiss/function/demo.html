@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modal | Can Dismiss</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+</head>
+
+<body>
+  <nav-app>
+    <div class="nav-page">
+      <nav-header>
+        <nav-toolbar>
+          <nav-title>App</nav-title>
+        </nav-toolbar>
+      </nav-header>
+      <nav-content class="nav-padding">
+        <nav-button id="open-modal" expand="block">Open</nav-button>
+
+        <nav-modal trigger="open-modal" swipe-to-close="true">
+          <nav-header>
+            <nav-toolbar>
+              <nav-title>Modal</nav-title>
+              <nav-buttons slot="end">
+                <nav-button onclick="dismiss()">Close</nav-button>
+              </nav-buttons>
+            </nav-toolbar>
+          </nav-header>
+          <nav-content class="nav-padding">
+            <p>You will be prompted when closing this modal.</p>
+          </nav-content>
+        </nav-modal>
+      </nav-content>
+    </div>
+  </nav-app>
+
+  <script>
+    const modal = document.querySelector('nav-modal');
+
+    modal.canDismiss = promptClose;
+    modal.presentingElement = document.querySelector('.nav-page');
+
+    function dismiss() {
+      modal.dismiss();
+    }
+
+    async function promptClose() {
+      const actionSheet = document.createElement('nav-action-sheet');
+
+      actionSheet.header = 'Are you sure?';
+      actionSheet.buttons = [{
+        text: 'Yes',
+        role: 'confirm'
+      }, {
+        text: 'No',
+        role: 'cancel'
+      }];
+      document.body.appendChild(actionSheet);
+      await actionSheet.present();
+
+      const { role } = await actionSheet.onWillDismiss();
+
+      return role === 'confirm';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Select</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-item>
+            <nav-label>Pet</nav-label>
+            <nav-select value="dog">
+              <nav-select-option value="cat">Cat</nav-select-option>
+              <nav-select-option value="dog">Dog</nav-select-option>
+            </nav-select>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Gaming</nav-label>
+            <nav-select interface="popover">
+              <nav-select-option value="nes">NES</nav-select-option>
+              <nav-select-option value="n64">Nintendo64</nav-select-option>
+              <nav-select-option value="ps">PlayStation</nav-select-option>
+              <nav-select-option value="genesis">Sega Genesis</nav-select-option>
+              <nav-select-option value="saturn">Sega Saturn</nav-select-option>
+              <nav-select-option value="snes">SNES</nav-select-option>
+            </nav-select>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Notifications</nav-label>
+            <nav-select value="notifications" interface="action-sheet">
+              <nav-select-option value="enable">Enable</nav-select-option>
+              <nav-select-option value="mute">Mute</nav-select-option>
+              <nav-select-option value="mute_week">Mute for a week</nav-select-option>
+              <nav-select-option value="mute_year">Mute for a year</nav-select-option>
+            </nav-select>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Operating System</nav-label>
+            <nav-select ok-text="Okay" cancel-text="Nah">
+              <nav-select-option value="dos">DOS</nav-select-option>
+              <nav-select-option value="lunix">Linux</nav-select-option>
+              <nav-select-option value="mac7">Mac OS 7</nav-select-option>
+              <nav-select-option value="mac8">Mac OS 8</nav-select-option>
+              <nav-select-option value="win3.1">Windows 3.1</nav-select-option>
+              <nav-select-option value="win95">Windows 95</nav-select-option>
+              <nav-select-option value="win98">Windows 98</nav-select-option>
+            </nav-select>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Music</nav-label>
+            <nav-select value="03">
+              <nav-select-option value="01">Alice in Chains</nav-select-option>
+              <nav-select-option value="02">Green Day</nav-select-option>
+              <nav-select-option value="03">Nirvana</nav-select-option>
+              <nav-select-option value="04">Pearl Jam</nav-select-option>
+              <nav-select-option value="05">Smashing Pumpkins</nav-select-option>
+              <nav-select-option value="06">Soundgarden</nav-select-option>
+              <nav-select-option value="07">Stone Temple Pilots</nav-select-option>
+            </nav-select>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Month</nav-label>
+            <nav-select value="12">
+              <nav-select-option value="01">January</nav-select-option>
+              <nav-select-option value="02">February</nav-select-option>
+              <nav-select-option value="03">March</nav-select-option>
+              <nav-select-option value="04">April</nav-select-option>
+              <nav-select-option value="05">May</nav-select-option>
+              <nav-select-option value="06">June</nav-select-option>
+              <nav-select-option value="07">July</nav-select-option>
+              <nav-select-option value="08">August</nav-select-option>
+              <nav-select-option value="09">September</nav-select-option>
+              <nav-select-option value="10">October</nav-select-option>
+              <nav-select-option value="11">November</nav-select-option>
+              <nav-select-option value="12">December</nav-select-option>
+            </nav-select>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Year</nav-label>
+            <nav-select value="1996">
+              <nav-select-option value="1989">1989</nav-select-option>
+              <nav-select-option value="1990">1990</nav-select-option>
+              <nav-select-option value="1991">1991</nav-select-option>
+              <nav-select-option value="1992">1992</nav-select-option>
+              <nav-select-option value="1993">1993</nav-select-option>
+              <nav-select-option value="1994">1994</nav-select-option>
+              <nav-select-option value="1995">1995</nav-select-option>
+              <nav-select-option value="1996">1996</nav-select-option>
+              <nav-select-option value="1997">1997</nav-select-option>
+              <nav-select-option value="1998">1998</nav-select-option>
+              <nav-select-option value="1999">1999</nav-select-option>
+            </nav-select>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

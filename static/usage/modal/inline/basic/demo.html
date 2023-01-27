@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modal | Inline</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+</head>
+
+<body>
+  <nav-app>
+    <nav-header>
+      <nav-toolbar>
+        <nav-title>Inline Modal</nav-title>
+      </nav-toolbar>
+    </nav-header>
+    <nav-content class="nav-padding">
+      <nav-button id="open-modal" expand="block">Open</nav-button>
+      <p id="message">This modal example uses triggers to automatically open a modal when the button is clicked.</p>
+      <nav-modal trigger="open-modal">
+        <nav-header>
+          <nav-toolbar>
+            <nav-buttons slot="start">
+              <nav-button onclick="cancel()">Cancel</nav-button>
+            </nav-buttons>
+            <nav-title>Welcome</nav-title>
+            <nav-buttons slot="end">
+              <nav-button onclick="confirm()" strong="true">Confirm
+            </nav-buttons>
+          </nav-toolbar>
+        </nav-header>
+        <nav-content class="nav-padding">
+          <nav-item>
+            <nav-label position="stacked">Enter your name</nav-label>
+            <nav-input type="text" placeholder="Your name"></nav-input>
+          </nav-item>
+        </nav-content>
+      </nav-modal>
+    </nav-content>
+  </nav-app>
+
+  <script>
+    const modal = document.querySelector('nav-modal');
+
+    function cancel() {
+      modal.dismiss(null, 'cancel');
+    }
+
+    function confirm() {
+      const input = document.querySelector('nav-input');
+      modal.dismiss(input.value, 'confirm');
+    }
+
+    modal.addEventListener('willDismiss', ev => {
+      if (ev.detail.role === 'confirm') {
+        const message = document.querySelector('#message');
+        message.textContent = `Hello ${ev.detail.data}!`;
+      }
+    });
+  </script>
+</body>
+
+</html>

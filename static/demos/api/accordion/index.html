@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Accordion</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@latest/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core@latest/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@latest/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+
+      nav-list-header {
+        padding-bottom: 12px;
+      }
+
+      nav-content {
+        --background: #f2f2f7;
+      }
+    </style>
+    <script type="module">
+      import { toastController } from 'https://cdn.jsdelivr.net/npm/@navify/core@latest/dist/navify/index.esm.js';
+      window.toastController = toastController;
+    </script>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent="true">
+        <nav-toolbar>
+          <nav-buttons slot="start">
+            <nav-back-button defaultHref="/"></nav-back-button>
+          </nav-buttons>
+          <nav-title>Accordion</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen class="component-content">
+        <component-details description="description" url="url"></component-details>
+
+        <nav-list inset="true">
+          <nav-list-header>Basic</nav-list-header>
+          <nav-accordion-group>
+            <nav-accordion value="colors">
+              <nav-item slot="header">
+                <nav-label>Colors</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Red</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Green</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Blue</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="shapes">
+              <nav-item slot="header">
+                <nav-label>Shapes</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Circle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Triangle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Square</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="numbers">
+              <nav-item slot="header">
+                <nav-label>Numbers</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>1</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>2</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>3</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+          </nav-accordion-group>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Custom Icon</nav-list-header>
+          <nav-accordion-group>
+            <nav-accordion value="colors" toggle-icon="arrow-down-circle">
+              <nav-item slot="header">
+                <nav-label>Colors</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Red</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Green</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Blue</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="shapes" toggle-icon="arrow-down-circle">
+              <nav-item slot="header">
+                <nav-label>Shapes</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Circle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Triangle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Square</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="numbers" toggle-icon="arrow-down-circle">
+              <nav-item slot="header">
+                <nav-label>Numbers</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>1</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>2</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>3</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+          </nav-accordion-group>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Open Accordion</nav-list-header>
+          <nav-accordion-group value="colors">
+            <nav-accordion value="colors">
+              <nav-item slot="header">
+                <nav-label>Colors</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Red</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Green</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Blue</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="shapes">
+              <nav-item slot="header">
+                <nav-label>Shapes</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Circle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Triangle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Square</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="numbers">
+              <nav-item slot="header">
+                <nav-label>Numbers</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>1</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>2</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>3</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+          </nav-accordion-group>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Multiple Accordions</nav-list-header>
+          <nav-accordion-group multiple="true" id="multiple">
+            <nav-accordion value="colors">
+              <nav-item slot="header">
+                <nav-label>Colors</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Red</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Green</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Blue</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="shapes">
+              <nav-item slot="header">
+                <nav-label>Shapes</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Circle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Triangle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Square</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="numbers">
+              <nav-item slot="header">
+                <nav-label>Numbers</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>1</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>2</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>3</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+          </nav-accordion-group>
+        </nav-list>
+
+        <nav-list inset="true">
+          <nav-list-header>Managing State</nav-list-header>
+          <nav-accordion-group id="state" value="numbers">
+            <nav-accordion value="colors">
+              <nav-item slot="header">
+                <nav-label>Colors</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Red</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Green</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Blue</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="shapes">
+              <nav-item slot="header">
+                <nav-label>Shapes</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>Circle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Triangle</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>Square</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+            <nav-accordion value="numbers">
+              <nav-item slot="header">
+                <nav-label>Numbers</nav-label>
+              </nav-item>
+
+              <nav-list slot="content">
+                <nav-item>
+                  <nav-label>1</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>2</nav-label>
+                </nav-item>
+                <nav-item>
+                  <nav-label>3</nav-label>
+                </nav-item>
+              </nav-list>
+            </nav-accordion>
+          </nav-accordion-group>
+        </nav-list>
+
+        <div class="nav-padding-start nav-padding-end nav-padding-bottom">
+          <nav-button expand="block" onclick="logAccordionGroup()">Log Value of Accordion Group</nav-button>
+          <nav-button expand="block" onclick="closeAccordions()">Close Accordion</nav-button>
+        </div>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      const stateAccordion = document.querySelector('#state');
+      function logAccordionGroup() {
+        const toast = toastController.create({
+          message: 'Accordion Value: ' + stateAccordion.value,
+          duration: 5000,
+        });
+
+        toast.then((toastEl) => {
+          toastEl.present();
+        });
+      }
+
+      function closeAccordions() {
+        stateAccordion.value = undefined;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    nav-grid {
+      width: 100%;
+      flex-grow: 0;
+    }
+
+    nav-col {
+      background-color: #135d54;
+      border: solid 1px #fff;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <b>Columns aligned at the top</b>
+        <nav-grid>
+          <nav-row class="nav-align-items-start">
+            <nav-col>
+              1
+            </nav-col>
+            <nav-col>
+              2
+            </nav-col>
+            <nav-col>
+              3
+            </nav-col>
+            <nav-col>
+              4 <br />
+              # <br />
+              # <br />
+              # <br />
+            </nav-col>
+          </nav-row>
+        </nav-grid>
+
+        <b>Columns aligned at the center</b>
+        <nav-grid>
+          <nav-row class="nav-align-items-center">
+            <nav-col>
+              1
+            </nav-col>
+            <nav-col>
+              2
+            </nav-col>
+            <nav-col>
+              3
+            </nav-col>
+            <nav-col>
+              4 <br />
+              # <br />
+              # <br />
+              # <br />
+            </nav-col>
+          </nav-row>
+        </nav-grid>
+
+        <b>Columns aligned at the bottom</b>
+        <nav-grid>
+          <nav-row class="nav-align-items-end">
+            <nav-col>
+              1
+            </nav-col>
+            <nav-col>
+              2
+            </nav-col>
+            <nav-col>
+              3
+            </nav-col>
+            <nav-col>
+              4 <br />
+              # <br />
+              # <br />
+              # <br />
+            </nav-col>
+          </nav-row>
+        </nav-grid>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

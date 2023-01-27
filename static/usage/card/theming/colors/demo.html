@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-wrap: wrap;
+    }
+
+    nav-card {
+      flex: 1 1 28%;
+    }
+
+    /* iOS places the subtitle above the title */
+    nav-card-header.ios {
+      display: flex;
+      flex-flow: column-reverse;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-card color="primary">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+
+        <nav-card color="secondary">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+
+        <nav-card color="tertiary">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+
+        <nav-card color="success">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+
+        <nav-card color="warning">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+
+        <nav-card color="danger">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+
+        <nav-card color="light">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+
+        <nav-card color="medium">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+
+        <nav-card color="dark">
+          <nav-card-header>
+            <nav-card-title>Card Title</nav-card-title>
+            <nav-card-subtitle>Card Subtitle</nav-card-subtitle>
+          </nav-card-header>
+
+          <nav-card-content>
+            Card Content
+          </nav-card-content>
+        </nav-card>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

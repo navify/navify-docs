@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modal | Sheet</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+</head>
+
+<body>
+  <nav-app>
+    <nav-header>
+      <nav-toolbar>
+        <nav-title>App</nav-title>
+      </nav-toolbar>
+    </nav-header>
+    <nav-content class="nav-padding">
+      <nav-button id="open-modal" expand="block">Open Sheet Modal</nav-button>
+
+      <nav-modal trigger="open-modal" initial-breakpoint="0.25" handle-behavior="cycle">
+        <nav-content class="nav-padding">
+          <div class="nav-margin-top">
+            <nav-label>Click the handle above to advance to the next breakpoint.</nav-label>
+          </div>
+        </nav-content>
+      </nav-modal>
+    </nav-content>
+  </nav-app>
+
+  <script>
+    const modal = document.querySelector('nav-modal');
+
+    modal.breakpoints = [0, 0.25, 0.5, 0.75];
+  </script>
+</body>
+
+</html>

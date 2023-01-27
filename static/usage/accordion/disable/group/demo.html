@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+    <link rel="stylesheet" href="../../../common.css" />
+    <script src="../../../common.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+  </head>
+  <body>
+    <nav-app>
+      <nav-content>
+        <div class="container">
+          <nav-accordion-group disabled="true">
+            <nav-accordion value="first">
+              <nav-item slot="header" color="light">
+                <nav-label>First Accordion</nav-label>
+              </nav-item>
+              <div class="nav-padding" slot="content">
+                First Content
+              </div>
+            </nav-accordion>
+            <nav-accordion value="second">
+              <nav-item slot="header" color="light">
+                <nav-label>Second Accordion</nav-label>
+              </nav-item>
+              <div class="nav-padding" slot="content">
+                Second Content
+              </div>
+            </nav-accordion>
+            <nav-accordion value="third">
+              <nav-item slot="header" color="light">
+                <nav-label>Third Accordion</nav-label>
+              </nav-item>
+              <div class="nav-padding" slot="content">
+                Third Content
+              </div>
+            </nav-accordion>
+          </nav-accordion-group>
+        </div>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

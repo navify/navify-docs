@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-item>
+          <nav-label>Default Input</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item>
+          <nav-label position="fixed">Fixed Input</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item>
+          <nav-label position="stacked">Stacked Input</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item>
+          <nav-label position="floating">Floating Input</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item fill="outline">
+          <nav-label position="floating">Floating Input: Outline (MD only)</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item fill="solid">
+          <nav-label position="floating">Floating Input: Solid (MD only)</nav-label>
+          <nav-input placeholder="Enter text"></nav-input>
+        </nav-item>
+
+        <nav-item>
+          <nav-label>Select</nav-label>
+          <nav-select placeholder="Make a Selection">
+            <nav-select-option value="">No Game Console</nav-select-option>
+            <nav-select-option value="nes">NES</nav-select-option>
+            <nav-select-option value="n64" selected>Nintendo64</nav-select-option>
+            <nav-select-option value="ps">PlayStation</nav-select-option>
+            <nav-select-option value="genesis">Sega Genesis</nav-select-option>
+            <nav-select-option value="saturn">Sega Saturn</nav-select-option>
+            <nav-select-option value="snes">SNES</nav-select-option>
+          </nav-select>
+        </nav-item>
+
+        <nav-item>
+          <nav-label>Toggle</nav-label>
+          <nav-toggle slot="end"></nav-toggle>
+        </nav-item>
+
+        <nav-item>
+          <nav-label>Checkbox</nav-label>
+          <nav-checkbox slot="end"></nav-checkbox>
+        </nav-item>
+
+        <nav-item>
+          <nav-label position="stacked">Range</nav-label>
+          <nav-range></nav-range>
+        </nav-item>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

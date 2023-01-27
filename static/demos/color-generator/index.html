@@ -1,0 +1,168 @@
+<script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css"/>
+
+<style>
+  nav-app {
+    --nav-safe-area-top: 20px;
+  }
+
+  .ios {
+    --nav-safe-area-bottom: 22px;
+  }
+
+  nav-grid {
+    background: #fff;
+
+    text-align: center;
+  }
+</style>
+<style id="color-style"></style>
+
+<nav-app>
+  <nav-tabs useRouter="false">
+    <nav-tab tab="preview">
+      <nav-header>
+        <nav-toolbar color="primary">
+            <nav-buttons slot="secondary">
+              <nav-button>
+                <nav-icon slot="icon-only" name="search"></nav-icon>
+              </nav-button>
+            </nav-buttons>
+            <nav-buttons slot="primary">
+              <nav-button>
+                <nav-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></nav-icon>
+              </nav-button>
+            </nav-buttons>
+            <nav-title>Theme Preview</nav-title>
+          </nav-toolbar>
+          <nav-toolbar color="primary">
+            <nav-segment value="all">
+              <nav-segment-button value="all">
+                All
+              </nav-segment-button>
+              <nav-segment-button value="favorites">
+                Favorites
+              </nav-segment-button>
+            </nav-segment>
+          </nav-toolbar>
+      </nav-header>
+
+      <nav-content>
+        <nav-list class="nav-no-padding">
+          <nav-item>
+            <nav-label>Medium Toggle</nav-label>
+            <nav-toggle slot="end" color="medium" name="medium" checked></nav-toggle>
+          </nav-item>
+          <nav-item>
+            <nav-label>Disabled Toggle</nav-label>
+            <nav-toggle slot="end" checked disabled></nav-toggle>
+          </nav-item>
+
+          <nav-item>Danger Toggle</nav-label>
+            <nav-toggle slot="end" color="danger" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>Success Toggle</nav-label>
+            <nav-toggle slot="end" color="success" checked></nav-toggle>
+          </nav-item>
+
+          <nav-grid class="button-grid">
+            <nav-row>
+              <nav-col>
+                <nav-button expand="block" color="primary">Aa</nav-button>
+              </nav-col>
+              <nav-col>
+                <nav-button expand="block" color="secondary">Aa</nav-button>
+              </nav-col>
+              <nav-col>
+                <nav-button expand="block" color="tertiary">Aa</nav-button>
+              </nav-col>
+            </nav-row>
+          </nav-grid>
+
+          <nav-grid>
+            <nav-row text-center>
+              <nav-col>
+                <nav-chip expand="block" color="success">
+                  <nav-label>Success</nav-label>
+                </nav-chip>
+              </nav-col>
+              <nav-col>
+                <nav-chip expand="block" color="warning">
+                  <nav-label>Warning</nav-label>
+                </nav-chip>
+              </nav-col>
+              <nav-col>
+                <nav-chip expand="block" color="danger">
+                  <nav-label>Danger</nav-label>
+                </nav-chip>
+              </nav-col>
+            </nav-row>
+          </nav-grid>
+          <nav-item>
+            <nav-icon name="star" color="primary" slot="start"></nav-icon>
+            <nav-label>Star</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-icon name="planet" color="secondary" slot="start"></nav-icon>
+            <nav-label>Planet</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-icon name="sunny" color="tertiary" slot="start"></nav-icon>
+            <nav-label>Sun</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-icon name="moon" color="success" slot="start"></nav-icon>
+            <nav-label>Moon</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-icon name="rocket" color="warning" slot="start"></nav-icon>
+            <nav-label>Rocket</nav-label>
+          </nav-item>
+          <nav-item lines="none">
+            <nav-icon name="md-globe" color="danger" slot="start"></nav-icon>
+            <nav-label>Earth</nav-label>
+          </nav-item>
+        </nav-list>
+
+        <nav-fab vertical="bottom" horizontal="end" id="fab4" slot="fixed">
+          <nav-fab-button color="tertiary" color="light" class="e2eFabBottomLeft">
+            <nav-icon name="arrow-up"></nav-icon>
+          </nav-fab-button>
+          <nav-fab-list side="top">
+            <nav-fab-button color="dark"><nav-icon name="logo-facebook"></nav-icon></nav-fab-button>
+            <nav-fab-button color="dark"><nav-icon name="logo-twitter"></nav-icon></nav-fab-button>
+            <nav-fab-button color="dark"><nav-icon name="logo-vimeo"></nav-icon></nav-fab-button>
+            <nav-fab-button color="dark"><nav-icon name="logo-googleplus"></nav-icon></nav-fab-button>
+          </nav-fab-list>
+        </nav-fab>
+      </nav-content>
+
+      <nav-tab-bar>
+        <nav-tab-button tab="preview">
+          <nav-label>Preview</nav-label>
+          <nav-icon name="color-palette"></nav-icon>
+        </nav-tab-button>
+        <nav-tab-button disabled>
+          <nav-label>Share</nav-label>
+          <nav-icon name="share"></nav-icon>
+        </nav-tab-button>
+      </nav-tab-bar>
+
+  </nav-tabs>
+
+</nav-app>
+
+<script>
+  const styleTag = document.querySelector('#color-style');
+
+  function handleMessage(message) {
+    const cssText = message.data ? message.data.cssText : null;
+    if (cssText) {
+      styleTag.innerHTML = cssText;
+    }
+  }
+
+  window.addEventListener('message', handleMessage);
+</script>

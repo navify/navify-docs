@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datetime</title>
+    <link rel="stylesheet" href="../../../common.css" />
+    <script src="../../../common.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+    <style>
+      nav-datetime {
+        width: 350px;
+        min-height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-content>
+        <div class="container">
+          <nav-datetime>
+            <nav-buttons slot="buttons">
+              <nav-button color="danger" onclick="datetime.reset()">Reset</nav-button>
+              <nav-button color="primary" onclick="datetime.cancel()">Never mind</nav-button>
+              <nav-button color="primary" onclick="datetime.confirm()">All Set</nav-button>
+            </nav-buttons>
+          </nav-datetime>
+        </div>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      const datetime = document.querySelector('nav-datetime');
+    </script>
+  </body>
+</html>

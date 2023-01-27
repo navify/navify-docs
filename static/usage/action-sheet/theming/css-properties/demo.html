@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Action Sheet</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-action-sheet.my-custom-class {
+      --background: #F58840;
+      --backdrop-opacity: 0.6;
+      --button-background-selected: #e97223;
+      --button-color: #000000;
+      --color: #fff;
+      /* role: "destructive" button iOS styling override */
+      --nav-color-danger: #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-button onclick="presentActionSheet()">Open</nav-button>
+      </div>
+    </nav-content>
+  </nav-app>
+  <script>
+    async function presentActionSheet() {
+      const actionSheet = document.createElement('nav-action-sheet');
+      actionSheet.cssClass = 'my-custom-class';
+      actionSheet.header = 'Example header';
+      actionSheet.subHeader = 'Example subheader';
+      actionSheet.buttons = [{
+        text: 'Delete',
+        role: 'destructive',
+        data: {
+          action: 'delete'
+        }
+      },
+      {
+        text: 'Share',
+        data: {
+          action: 'share'
+        }
+      },
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        data: {
+          action: 'cancel'
+        }
+      }];
+
+      document.body.appendChild(actionSheet);
+      await actionSheet.present();
+    }
+  </script>
+</body>
+
+</html>

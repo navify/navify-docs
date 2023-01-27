@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>List</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-list-header> Recent Conversations </nav-list-header>
+
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar-finn.png" />
+            </nav-avatar>
+            <nav-label>
+              <h2>Finn</h2>
+              <h3>I'm a big deal</h3>
+              <p>Listen, I've had a pretty messed up day...</p>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar-han.png" />
+            </nav-avatar>
+            <nav-label>
+              <h2>Han</h2>
+              <h3>Look, kid...</h3>
+              <p>I've got enough on my plate as it is, and I...</p>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar-rey.png" />
+            </nav-avatar>
+            <nav-label>
+              <h2>Rey</h2>
+              <h3>I can handle myself</h3>
+              <p>You will remove these restraints and leave...</p>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar-luke.png" />
+            </nav-avatar>
+            <nav-label>
+              <h2>Luke</h2>
+              <h3>Your thoughts betray you</h3>
+              <p>I feel the good in you, the conflict...</p>
+            </nav-label>
+          </nav-item>
+        </nav-list>
+
+        <nav-list>
+          <nav-list-header> Online </nav-list-header>
+
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar-poe.png" />
+            </nav-avatar>
+            <nav-label>
+              <h2>Poe</h2>
+              <h3>New Ride</h3>
+              <p>I just upgraded my X-Wing. Next time...</p>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar-ben.png" />
+            </nav-avatar>
+            <nav-label>
+              <h2>Ben</h2>
+              <h3>Move Along</h3>
+              <p>These aren't the droids you're looking for...</p>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar-leia.png" />
+            </nav-avatar>
+            <nav-label>
+              <h2>Leia</h2>
+              <h3>You're My Only Hope</h3>
+              <p>I've placed information vital to the survival...</p>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-avatar slot="start">
+              <img src="./avatar-yoda.png" />
+            </nav-avatar>
+            <nav-label>
+              <h2>Yoda</h2>
+              <h3>Size matters not</h3>
+              <p>Do or do not. There is no try...</p>
+            </nav-label>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

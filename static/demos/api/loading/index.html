@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Action Sheet</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+    <script type="module">
+      import { loadingController } from 'https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/index.esm.js';
+      window.loadingController = loadingController;
+    </script>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Loading</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen class="nav-padding">
+        <nav-button expand="block" onclick="handleButtonClick()">Show Loading</nav-button>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      async function handleButtonClick() {
+        const loading = await loadingController.create({
+          message: 'Please wait...',
+          duration: 3000,
+        });
+
+        await loading.present();
+      }
+    </script>
+  </body>
+</html>

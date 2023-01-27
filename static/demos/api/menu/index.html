@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+    <script type="module">
+      import { menuController } from 'https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/index.esm.js';
+      window.menuController = menuController;
+    </script>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-menu side="start" content-id="main-content">
+        <nav-header>
+          <nav-toolbar translucent>
+            <nav-title>Menu</nav-title>
+          </nav-toolbar>
+        </nav-header>
+        <nav-content>
+          <nav-list>
+            <nav-item>
+              <nav-icon name="mail" slot="start"></nav-icon>
+              <nav-label>Inbox</nav-label>
+            </nav-item>
+            <nav-item>
+              <nav-icon name="paper-plane" slot="start"></nav-icon>
+              <nav-label>Outbox</nav-label>
+            </nav-item>
+            <nav-item>
+              <nav-icon name="heart" slot="start"></nav-icon>
+              <nav-label>Favorites</nav-label>
+            </nav-item>
+            <nav-item>
+              <nav-icon name="archive" slot="start"></nav-icon>
+              <nav-label>Archived</nav-label>
+            </nav-item>
+            <nav-item>
+              <nav-icon name="trash" slot="start"></nav-icon>
+              <nav-label>Trash</nav-label>
+            </nav-item>
+            <nav-item>
+              <nav-icon name="warning" slot="start"></nav-icon>
+              <nav-label>Spam</nav-label>
+            </nav-item>
+          </nav-list>
+        </nav-content>
+      </nav-menu>
+
+      <div class="nav-page" id="main-content">
+        <nav-header>
+          <nav-toolbar>
+            <nav-buttons slot="start">
+              <nav-menu-button></nav-menu-button>
+            </nav-buttons>
+            <nav-title>Inbox</nav-title>
+          </nav-toolbar>
+        </nav-header>
+        <nav-content class="nav-padding">
+          <nav-button expand="block" onclick="openMenu()">Open Menu</nav-button>
+        </nav-content>
+      </div>
+    </nav-app>
+
+    <script>
+      async function openMenu() {
+        await menuController.open();
+      }
+    </script>
+  </body>
+</html>

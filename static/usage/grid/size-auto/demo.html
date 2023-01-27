@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    nav-grid {
+      width: 100%;
+      flex-grow: 0;
+    }
+
+    nav-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background-color: #135d54;
+      border: solid 1px #fff;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <b>Column 1 has <code>size</code> set to <code>"auto"</code></b>
+        <nav-grid>
+          <nav-row>
+            <nav-col size="auto">1</nav-col>
+            <nav-col>2</nav-col>
+            <nav-col>3</nav-col>
+          </nav-row>
+        </nav-grid>
+
+        <b>Column 3 contains an input and has <code>size</code> set to <code>"auto"</code></b>
+        <nav-grid>
+          <nav-row>
+            <nav-col>1</nav-col>
+            <nav-col>2</nav-col>
+            <nav-col size="auto">
+              <nav-input placeholder="3"></nav-input>
+            </nav-col>
+            <nav-col>4</nav-col>
+            <nav-col>5</nav-col>
+            <nav-col>6</nav-col>
+          </nav-row>
+        </nav-grid>
+
+        <b>Column 2 has <code>size</code> set to <code>"auto"</code> and a defined width</b>
+        <nav-grid>
+          <nav-row>
+            <nav-col>1</nav-col>
+            <nav-col size="auto">
+              <div style="width: 150px">2</div>
+            </nav-col>
+          </nav-row>
+        </nav-grid>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

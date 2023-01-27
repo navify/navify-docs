@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badge</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-list {
+      width: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>
+          <nav-item>
+            <nav-badge slot="start">11</nav-badge>
+            <nav-label>Badge in start slot</nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-badge slot="end">22</nav-badge>
+            <nav-label>Badge in end slot</nav-label>
+          </nav-item>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

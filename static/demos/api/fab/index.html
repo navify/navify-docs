@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fab</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Fab</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen class="nav-padding">
+        <nav-fab horizontal="end" vertical="top" slot="fixed" edge>
+          <nav-fab-button>
+            <nav-icon name="add"></nav-icon>
+          </nav-fab-button>
+          <nav-fab-list>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-facebook"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-twitter"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-vimeo"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+        </nav-fab>
+
+        <nav-fab horizontal="end" vertical="center" slot="fixed">
+          <nav-fab-button color="danger">
+            <nav-icon name="add"></nav-icon>
+          </nav-fab-button>
+        </nav-fab>
+
+        <nav-fab horizontal="end" vertical="bottom" slot="fixed">
+          <nav-fab-button color="light">
+            <nav-icon md="caret-back" ios="chevron-back-circle-outline"></nav-icon>
+          </nav-fab-button>
+          <nav-fab-list side="start">
+            <nav-fab-button color="light">
+              <nav-icon name="logo-facebook"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-twitter"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-vimeo"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+        </nav-fab>
+
+        <nav-fab horizontal="start" vertical="bottom" slot="fixed">
+          <nav-fab-button color="dark">
+            <nav-icon md="caret-up" ios="chevron-up-circle-outline"></nav-icon>
+          </nav-fab-button>
+          <nav-fab-list side="top">
+            <nav-fab-button color="light">
+              <nav-icon name="logo-facebook"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-twitter"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-vimeo"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-google"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+        </nav-fab>
+
+        <nav-fab horizontal="start" vertical="top" slot="fixed">
+          <nav-fab-button color="secondary">
+            <nav-icon md="caret-forward" ios="chevron-forward-circle-outline"></nav-icon>
+          </nav-fab-button>
+          <nav-fab-list side="end">
+            <nav-fab-button color="light">
+              <nav-icon name="logo-facebook"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-twitter"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-vimeo"></nav-icon>
+            </nav-fab-button>
+            <nav-fab-button color="light">
+              <nav-icon name="logo-google"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+        </nav-fab>
+
+        <nav-fab horizontal="center" vertical="center" slot="fixed">
+          <nav-fab-button color="light">
+            <nav-icon name="share"></nav-icon>
+          </nav-fab-button>
+          <nav-fab-list side="top">
+            <nav-fab-button color="primary">
+              <nav-icon name="logo-vimeo"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+          <nav-fab-list side="end">
+            <nav-fab-button color="dark">
+              <nav-icon name="logo-twitter"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+          <nav-fab-list side="bottom">
+            <nav-fab-button color="secondary">
+              <nav-icon name="logo-facebook"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+          <nav-fab-list side="start">
+            <nav-fab-button color="light">
+              <nav-icon name="logo-google"></nav-icon>
+            </nav-fab-button>
+          </nav-fab-list>
+        </nav-fab>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

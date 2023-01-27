@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Segment</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-flow: column;
+      justify-content: space-evenly;
+
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-segment value="default">
+          <nav-segment-button value="default">
+            <nav-label>Default</nav-label>
+          </nav-segment-button>
+          <nav-segment-button value="segment">
+            <nav-label>Segment</nav-label>
+          </nav-segment-button>
+        </nav-segment>
+
+        <nav-segment disabled value="disabled">
+          <nav-segment-button value="disabled">
+            <nav-label>Disabled</nav-label>
+          </nav-segment-button>
+          <nav-segment-button value="segment">
+            <nav-label>Segment</nav-label>
+          </nav-segment-button>
+        </nav-segment>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

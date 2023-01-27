@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-list {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>
+          <nav-item>
+            <nav-label>Default input</nav-label>
+            <nav-input></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Input with placeholder</nav-label>
+            <nav-input placeholder="Enter company name"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Input with value</nav-label>
+            <nav-input value="121 S Pinckney St #300"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Readonly input</nav-label>
+            <nav-input value="Madison" readonly="true"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Disabled input</nav-label>
+            <nav-input value="53703" disabled="true"></nav-input>
+          </nav-item>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

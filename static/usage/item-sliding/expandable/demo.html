@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item Sliding</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>
+          <nav-item-sliding>
+            <nav-item-options side="start">
+              <nav-item-option color="success" expandable>Archive</nav-item-option>
+            </nav-item-options>
+
+            <nav-item>
+              <nav-label>Sliding Item with Expandable Options</nav-label>
+            </nav-item>
+
+            <nav-item-options side="end">
+              <nav-item-option>Favorite</nav-item-option>
+              <nav-item-option color="danger" expandable>Delete</nav-item-option>
+            </nav-item-options>
+          </nav-item-sliding>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

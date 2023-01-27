@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Note</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .flex-items {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 440px;
+    }
+
+    nav-note {
+      margin: 0 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <div class="flex-items">
+          <nav-note>Default Note</nav-note>
+          <nav-note color="primary">Primary Note</nav-note>
+          <nav-note color="secondary">Secondary Note</nav-note>
+          <nav-note color="tertiary">Tertiary Note</nav-note>
+          <nav-note color="success">Success Note</nav-note>
+          <nav-note color="warning">Warning Note</nav-note>
+          <nav-note color="danger">Danger Note</nav-note>
+          <nav-note color="light">Light Note</nav-note>
+          <nav-note color="medium">Medium Note</nav-note>
+          <nav-note color="dark">Dark Note</nav-note>
+        </div>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

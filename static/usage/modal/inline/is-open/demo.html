@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modal | Inline</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+</head>
+
+<body>
+  <nav-app>
+    <nav-header>
+      <nav-toolbar>
+        <nav-title>Inline Modal</nav-title>
+      </nav-toolbar>
+    </nav-header>
+    <nav-content class="nav-padding">
+      <nav-button expand="block" onclick="modal.isOpen = true">Open</nav-button>
+      <nav-modal>
+        <nav-header>
+          <nav-toolbar>
+            <nav-title>Modal</nav-title>
+            <nav-buttons slot="end">
+              <nav-button onclick="modal.isOpen = false">Close</nav-button>
+            </nav-buttons>
+          </nav-toolbar>
+        </nav-header>
+        <nav-content class="nav-padding">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+            reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+            dicta.</p>
+        </nav-content>
+      </nav-modal>
+    </nav-content>
+  </nav-app>
+
+  <script>
+    const modal = document.querySelector('nav-modal');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      flex-wrap: wrap;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    p {
+      width: 80%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-text color="primary">
+          <h1>H1: The quick brown fox jumps over the lazy dog</h1>
+        </nav-text>
+
+        <nav-text color="secondary">
+          <h2>H2: The quick brown fox jumps over the lazy dog</h2>
+        </nav-text>
+
+        <nav-text color="tertiary">
+          <h3>H3: The quick brown fox jumps over the lazy dog</h3>
+        </nav-text>
+
+        <p>
+          <nav-text color="warning"><nav-icon name="warning"></nav-icon></nav-text>
+          I saw a werewolf with a Chinese menu in his hand.
+          Walking through the <nav-text color="success"><sub>streets</sub></nav-text> of Soho in the rain.
+          He <nav-text color="medium"><i>was</i></nav-text> looking for a place called Lee Ho Fook's.
+          Gonna get a <nav-text color="danger">big dish of beef chow mein.</nav-text>
+        </p>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

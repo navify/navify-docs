@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Range</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Range</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-list-header> Adjust Display </nav-list-header>
+
+          <nav-item>
+            <nav-range value="20">
+              <nav-icon slot="start" size="small" name="sunny"></nav-icon>
+              <nav-icon slot="end" name="sunny"></nav-icon>
+            </nav-range>
+          </nav-item>
+
+          <nav-item>
+            <nav-range min="-200" max="200" pin color="secondary">
+              <nav-icon slot="start" size="small" name="contrast"></nav-icon>
+              <nav-icon slot="end" name="contrast"></nav-icon>
+            </nav-range>
+          </nav-item>
+
+          <nav-item>
+            <nav-range id="dual-range" dual-knobs pin color="dark">
+              <nav-icon slot="start" size="small" name="brush"></nav-icon>
+              <nav-icon slot="end" name="brush"></nav-icon>
+            </nav-range>
+          </nav-item>
+
+          <nav-item>
+            <nav-range min="1000" max="2000" step="100" value="1400" snaps color="danger">
+              <nav-icon slot="start" size="small" color="danger" name="thermometer"></nav-icon>
+              <nav-icon slot="end" color="danger" name="thermometer"></nav-icon>
+            </nav-range>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      const dualRange = document.querySelector('#dual-range');
+      dualRange.value = { lower: 33, upper: 60 };
+    </script>
+  </body>
+</html>

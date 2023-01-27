@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refresher</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+
+      nav-content {
+        user-select: none;
+      }
+
+      nav-item {
+        --padding-start: 8px;
+      }
+
+      .unread {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: #3684ff;
+        margin-top: 15px;
+        margin-right: 8px;
+        align-self: start;
+      }
+
+      nav-item h2 {
+        font-weight: 500 !important;
+      }
+
+      nav-item h3 {
+        color: #777;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Refresher</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content>
+        <nav-refresher slot="fixed" id="refresher">
+          <nav-refresher-content></nav-refresher-content>
+        </nav-refresher>
+
+        <nav-list></nav-list>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      const refresher = document.getElementById('refresher');
+      const names = [
+        'Burt Bear',
+        'Charlie Cheetah',
+        'Donald Duck',
+        'Eva Eagle',
+        'Ellie Elephant',
+        'Gino Giraffe',
+        'Isabella Iguana',
+        'Karl Kitten',
+        'Lionel Lion',
+        'Molly Mouse',
+        'Paul Puppy',
+        'Rachel Rabbit',
+        'Ted Turtle',
+      ];
+
+      refresher.addEventListener('navRefresh', () => {
+        setTimeout(() => {
+          prependMessages(5, true);
+          refresher.complete();
+        }, 2000);
+      });
+
+      const list = document.querySelector('nav-list');
+      appendMessages(5);
+
+      function chooseRandomName() {
+        return names[Math.floor(Math.random() * names.length)];
+      }
+
+      function appendMessages(numMessages = 1, unread) {
+        for (let i = 0; i < numMessages; i++) {
+          list.appendChild(createMessage(unread));
+        }
+      }
+
+      function prependMessages(numMessages = 1, unread) {
+        for (let i = 0; i < numMessages; i++) {
+          list.insertBefore(createMessage(unread), list.firstChild);
+        }
+      }
+
+      function createMessage(unread = false) {
+        let item = document.createElement('nav-item');
+        item.innerHTML = `
+        <div slot="start" class="${unread ? 'unread' : 'read'}"></div>
+        <nav-label class="nav-text-wrap">
+          <h2>${chooseRandomName()}</h2>
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+        </nav-label>
+      `;
+
+        return item;
+      }
+    </script>
+  </body>
+</html>

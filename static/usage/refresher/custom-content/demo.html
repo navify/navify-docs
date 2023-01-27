@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refresher</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+</head>
+
+<body>
+  <nav-app>
+    <nav-header>
+      <nav-toolbar>
+        <nav-title>Pull to Refresh</nav-title>
+      </nav-toolbar>
+    </nav-header>
+
+    <nav-content class="nav-padding">
+      <nav-refresher id="refresher" slot="fixed">
+        <nav-refresher-content
+          pulling-icon="chevron-down-circle-outline"
+          pulling-text="Pull to refresh"
+          refreshing-spinner="circles"
+          refreshing-text="Refreshing...">
+        </nav-refresher-content>
+      </nav-refresher>
+
+      <p>Pull this content down to trigger the refresh.</p>
+    </nav-content>
+  </nav-app>
+
+  <script>
+    const refresher = document.getElementById('refresher');
+
+    refresher.addEventListener('navRefresh', () => {
+      setTimeout(() => {
+        // Any calls to load data go here
+        refresher.complete();
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chip</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Chip</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list-header>Basic</nav-list-header>
+        <p>
+          <nav-chip>
+            <nav-label>Default</nav-label>
+          </nav-chip>
+          <nav-chip>
+            <nav-icon name="checkmark-circle"></nav-icon>
+            <nav-label>Icon</nav-label>
+          </nav-chip>
+          <nav-chip>
+            <nav-avatar>
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+"
+              />
+            </nav-avatar>
+            <nav-label>Avatar</nav-label>
+          </nav-chip>
+        </p>
+
+        <nav-list-header>Colors</nav-list-header>
+        <p>
+          <nav-chip color="primary">
+            <nav-label>Primary</nav-label>
+          </nav-chip>
+          <nav-chip color="secondary">
+            <nav-label>Secondary</nav-label>
+          </nav-chip>
+          <nav-chip color="tertiary">
+            <nav-label>Tertiary</nav-label>
+          </nav-chip>
+          <nav-chip color="success">
+            <nav-label>Success</nav-label>
+          </nav-chip>
+          <nav-chip color="warning">
+            <nav-label>Warning</nav-label>
+          </nav-chip>
+          <nav-chip color="danger">
+            <nav-label>Danger</nav-label>
+          </nav-chip>
+        </p>
+
+        <nav-list-header>Outline</nav-list-header>
+        <p>
+          <nav-chip outline color="primary">
+            <nav-label>Primary</nav-label>
+          </nav-chip>
+          <nav-chip outline color="secondary">
+            <nav-label>Secondary</nav-label>
+          </nav-chip>
+          <nav-chip outline color="tertiary">
+            <nav-label>Tertiary</nav-label>
+          </nav-chip>
+          <nav-chip outline color="success">
+            <nav-label>Success</nav-label>
+          </nav-chip>
+          <nav-chip outline color="warning">
+            <nav-label>Warning</nav-label>
+          </nav-chip>
+          <nav-chip outline color="danger">
+            <nav-label>Danger</nav-label>
+          </nav-chip>
+        </p>
+
+        <nav-list-header>Icons</nav-list-header>
+        <p>
+          <nav-chip outline color="primary">
+            <nav-icon name="pin"></nav-icon>
+            <nav-label>Madison</nav-label>
+            <nav-icon name="close-circle"></nav-icon>
+          </nav-chip>
+          <nav-chip outline color="secondary">
+            <nav-icon name="wine"></nav-icon>
+            <nav-label>Nightlife</nav-label>
+            <nav-icon name="close-circle"></nav-icon>
+          </nav-chip>
+          <nav-chip outline color="tertiary">
+            <nav-icon name="restaurant"></nav-icon>
+            <nav-label>Dining</nav-label>
+            <nav-icon name="close-circle"></nav-icon>
+          </nav-chip>
+          <nav-chip outline color="dark">
+            <nav-icon name="videocam"></nav-icon>
+            <nav-label>Entertainment</nav-label>
+            <nav-icon name="close-circle"></nav-icon>
+          </nav-chip>
+        </p>
+      </nav-content>
+    </nav-app>
+
+    <style>
+      p {
+        margin-left: 16px;
+        margin-top: 0;
+      }
+    </style>
+  </body>
+</html>

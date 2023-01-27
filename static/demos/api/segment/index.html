@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segment</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Segment</nav-title>
+        </nav-toolbar>
+        <nav-toolbar>
+          <nav-segment value="all">
+            <nav-segment-button value="all">
+              <nav-label>All</nav-label>
+            </nav-segment-button>
+            <nav-segment-button value="favorites">
+              <nav-label>Favorites</nav-label>
+            </nav-segment-button>
+          </nav-segment>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list-header>Default</nav-list-header>
+
+        <!-- Label only -->
+        <nav-segment value="favorite">
+          <nav-segment-button value="call">
+            <nav-label>Call</nav-label>
+          </nav-segment-button>
+          <nav-segment-button value="favorite">
+            <nav-label>Favorite</nav-label>
+          </nav-segment-button>
+          <nav-segment-button value="map">
+            <nav-label>Map</nav-label>
+          </nav-segment-button>
+        </nav-segment>
+
+        <!-- Icon only -->
+        <nav-segment color="secondary" value="call">
+          <nav-segment-button value="call">
+            <nav-icon name="call"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="heart">
+            <nav-icon name="heart"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="map">
+            <nav-icon name="pin"></nav-icon>
+          </nav-segment-button>
+        </nav-segment>
+
+        <!-- Icon top -->
+        <nav-segment color="tertiary" value="favorite">
+          <nav-segment-button value="call">
+            <nav-label>Call</nav-label>
+            <nav-icon name="call"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="favorite">
+            <nav-label>Favorite</nav-label>
+            <nav-icon name="heart"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="map">
+            <nav-label>Map</nav-label>
+            <nav-icon name="pin"></nav-icon>
+          </nav-segment-button>
+        </nav-segment>
+
+        <!-- Icon bottom -->
+        <nav-segment color="success" value="call">
+          <nav-segment-button value="call" layout="icon-bottom">
+            <nav-icon name="call"></nav-icon>
+            <nav-label>Call</nav-label>
+          </nav-segment-button>
+          <nav-segment-button value="favorite" layout="icon-bottom">
+            <nav-icon name="heart"></nav-icon>
+            <nav-label>Favorite</nav-label>
+          </nav-segment-button>
+          <nav-segment-button value="map" layout="icon-bottom">
+            <nav-icon name="pin"></nav-icon>
+            <nav-label>Map</nav-label>
+          </nav-segment-button>
+        </nav-segment>
+
+        <nav-list-header>Scrollable</nav-list-header>
+
+        <!-- Icon start -->
+        <nav-segment color="warning" scrollable value="call">
+          <nav-segment-button value="call" layout="icon-start">
+            <nav-label>Call</nav-label>
+            <nav-icon name="call"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="favorite" layout="icon-start">
+            <nav-label>Favorite</nav-label>
+            <nav-icon name="heart"></nav-icon>
+          </nav-segment-button>
+          <nav-segment-button value="map" layout="icon-start">
+            <nav-label>Map</nav-label>
+            <nav-icon name="pin"></nav-icon>
+          </nav-segment-button>
+        </nav-segment>
+
+        <!-- Icon end -->
+        <nav-segment color="danger" scrollable value="map">
+          <nav-segment-button value="call" layout="icon-end">
+            <nav-icon name="call"></nav-icon>
+            <nav-label>Call</nav-label>
+          </nav-segment-button>
+          <nav-segment-button value="favorite" layout="icon-end">
+            <nav-icon name="heart"></nav-icon>
+            <nav-label>Favorite</nav-label>
+          </nav-segment-button>
+          <nav-segment-button value="map" layout="icon-end">
+            <nav-icon name="pin"></nav-icon>
+            <nav-label>Map</nav-label>
+          </nav-segment-button>
+        </nav-segment>
+      </nav-content>
+    </nav-app>
+
+    <style>
+      nav-content nav-segment {
+        margin: 5px 0;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+    <script type="module">
+      import { pickerController } from 'https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/index.esm.js';
+      window.pickerController = pickerController;
+    </script>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Picker</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen class="nav-padding">
+        <nav-button expand="block" onclick="openPicker()">Show Single Column Picker</nav-button>
+        <nav-button expand="block" onclick="openPicker(2, 5, multiColumnOptions)">Show Multi Column Picker</nav-button>
+      </nav-content>
+    </nav-app>
+    <script>
+      const defaultColumnOptions = [['Dog', 'Cat', 'Bird', 'Lizard', 'Chinchilla']];
+
+      const multiColumnOptions = [
+        ['Minified', 'Responsive', 'Full Stack', 'Mobile First', 'Serverless'],
+        ['Tomato', 'Avocado', 'Onion', 'Potato', 'Artichoke'],
+      ];
+
+      async function openPicker(numColumns = 1, numOptions = 5, columnOptions = defaultColumnOptions) {
+        const picker = await pickerController.create({
+          columns: this.getColumns(numColumns, numOptions, columnOptions),
+          buttons: [
+            {
+              text: 'Cancel',
+              role: 'cancel',
+            },
+            {
+              text: 'Confirm',
+              handler: (value) => {
+                console.log(`Got Value ${value}`);
+              },
+            },
+          ],
+        });
+
+        await picker.present();
+      }
+
+      function getColumns(numColumns, numOptions, columnOptions) {
+        let columns = [];
+        for (let i = 0; i < numColumns; i++) {
+          columns.push({
+            name: `col-${i}`,
+            options: this.getColumnOptions(i, numOptions, columnOptions),
+          });
+        }
+
+        return columns;
+      }
+
+      function getColumnOptions(columnIndex, numOptions, columnOptions) {
+        let options = [];
+        for (let i = 0; i < numOptions; i++) {
+          options.push({
+            text: columnOptions[columnIndex][i % numOptions],
+            value: i,
+          });
+        }
+
+        return options;
+      }
+    </script>
+  </body>
+</html>

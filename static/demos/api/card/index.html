@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Card</nav-title>
+        </nav-toolbar> </nav-header
+      >
+      <nav-content fullscreen>
+        <nav-card>
+          <img src="./madison.jpg" />
+          <nav-card-header>
+            <nav-card-subtitle>Destination</nav-card-subtitle>
+            <nav-card-title>Madison, WI</nav-card-title>
+          </nav-card-header>
+          <nav-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the
+            Wisconsin Territory in 1836.
+          </nav-card-content>
+        </nav-card>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

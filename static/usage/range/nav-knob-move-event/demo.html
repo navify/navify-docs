@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Range</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+  <style>
+    .demo {
+      max-width: 320px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <div class="demo">
+          <nav-range></nav-range>
+          <div>
+            <nav-label>navKnobMoveStart: <span id="moveStart"></span></nav-label>
+          </div>
+          <div>
+            <nav-label>navKnobMoveEnd: <span id="moveEnd"></span></nav-label>
+          </div>
+        </div>
+    </nav-content>
+  </nav-app>
+  <script>
+    const range = document.querySelector('nav-range');
+    const moveStart = document.querySelector('#moveStart');
+    const moveEnd = document.querySelector('#moveEnd');
+
+    range.addEventListener('navKnobMoveStart', ({ detail }) => {
+      moveStart.innerHTML = detail.value;
+    });
+
+    range.addEventListener('navKnobMoveEnd', ({ detail }) => {
+      moveEnd.innerHTML = detail.value;
+    });
+  </script>
+</body>
+
+</html>

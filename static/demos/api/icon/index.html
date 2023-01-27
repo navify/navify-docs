@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Icon</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen class="nav-padding">
+        <nav-list>
+          <nav-item>
+            <nav-icon name="home" id="dynamicColor" slot="start"></nav-icon>
+            <nav-label>
+              <code> name="home" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="home" slot="start"></nav-icon>
+            <nav-label>
+              <code> name="home" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon id="dynamicHomeIcon" slot="start"></nav-icon>
+            <nav-label>
+              <code> id="dynamicHomeIcon" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="md-home" slot="start"></nav-icon>
+            <nav-label>
+              <code> name="md-home" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="ios-home" slot="start"></nav-icon>
+            <nav-label>
+              <code> name="ios-home" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="ios-home" slot="end"></nav-icon>
+            <nav-label>
+              <code> name="ios-home" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="ios-star-outline" slot="start"></nav-icon>
+            <nav-label>
+              <code> name="ios-star-outline" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="IOS-STAR-OUTLINE" slot="end"></nav-icon>
+            <nav-label>
+              <code> name="IOS-STAR-OUTLINE" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="md-home" color="primary" slot="start"></nav-icon>
+            <nav-label>
+              <code> name="md-home" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="logo-twitter" color="secondary" slot="start"></nav-icon>
+            <nav-label>
+              <code> name="logo-twitter" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon ios="logo-apple" md="logo-android" slot="start"></nav-icon>
+            <nav-label>
+              <code> ios="logo-apple" md="logo-android" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon name="color-filter" slot="start"></nav-icon>
+            <nav-label>
+              <code> name="color-filter" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon ios="ios-color-filter" md="md-color-filter" slot="start"></nav-icon>
+            <nav-label>
+              <code> ios="ios-color-filter" md="md-color-filter" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon ios="MD-COLOR-FILTER" md="IOS-COLOR-FILTER" slot="start"></nav-icon>
+            <nav-label>
+              <code> ios="MD-COLOR-FILTER" md="IOS-COLOR-FILTER" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon slot="start"></nav-icon>
+            <nav-label>
+              <code> name="null" </code>
+            </nav-label>
+          </nav-item>
+
+          <nav-item detail="true">
+            <nav-label>
+              <code> nav-item w/ [detail="true"] attr. text text text text text text </code>
+            </nav-label>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

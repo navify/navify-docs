@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Item</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-list-header> Items with Labels </nav-list-header>
+          <nav-item>
+            <nav-label>Label</nav-label>
+          </nav-item>
+
+          <nav-item>
+            <nav-icon slot="end" name="logo-navify"></nav-icon>
+            <nav-label>Label with Icon</nav-label>
+          </nav-item>
+        </nav-list>
+
+        <nav-list>
+          <nav-list-header> Color Items </nav-list-header>
+          <nav-item color="primary">
+            <nav-label>Primary</nav-label>
+          </nav-item>
+
+          <nav-item color="secondary">
+            <nav-label>Secondary</nav-label>
+          </nav-item>
+
+          <nav-item color="tertiary">
+            <nav-label>Tertiary</nav-label>
+          </nav-item>
+
+          <nav-item color="success">
+            <nav-label>Success</nav-label>
+          </nav-item>
+
+          <nav-item color="warning">
+            <nav-label>Warning</nav-label>
+          </nav-item>
+
+          <nav-item color="danger">
+            <nav-label>Danger</nav-label>
+          </nav-item>
+        </nav-list>
+
+        <nav-list>
+          <nav-list-header> Group with Divider </nav-list-header>
+
+          <nav-item-group>
+            <nav-item-divider>
+              <nav-label>A</nav-label>
+            </nav-item-divider>
+
+            <nav-item>
+              <nav-label>Adam</nav-label>
+            </nav-item>
+
+            <nav-item lines="none">
+              <nav-label>Alan</nav-label>
+            </nav-item>
+
+            <nav-item-divider>
+              <nav-label>B</nav-label>
+            </nav-item-divider>
+
+            <nav-item lines="none">
+              <nav-label>Brianna</nav-label>
+            </nav-item>
+
+            <nav-item-divider>
+              <nav-label>C</nav-label>
+            </nav-item-divider>
+
+            <nav-item lines="none">
+              <nav-label>Carla</nav-label>
+            </nav-item>
+          </nav-item-group>
+        </nav-list>
+
+        <nav-list>
+          <nav-list-header> Sliding Item </nav-list-header>
+
+          <nav-item-sliding>
+            <nav-item>
+              <nav-label>New Message</nav-label>
+            </nav-item>
+
+            <nav-item-options side="start">
+              <nav-item-option color="primary">Mark Unread</nav-item-option>
+            </nav-item-options>
+
+            <nav-item-options side="end">
+              <nav-item-option color="danger">Delete</nav-item-option>
+            </nav-item-options>
+          </nav-item-sliding>
+
+          <nav-item-sliding>
+            <nav-item>
+              <nav-label>New Message</nav-label>
+            </nav-item>
+
+            <nav-item-options side="start">
+              <nav-item-option color="primary">Mark Unread</nav-item-option>
+            </nav-item-options>
+
+            <nav-item-options side="end">
+              <nav-item-option color="danger">Delete</nav-item-option>
+            </nav-item-options>
+          </nav-item-sliding>
+        </nav-list>
+
+        <nav-list>
+          <nav-list-header> Notes </nav-list-header>
+          <nav-item>
+            <nav-label>Primary Note</nav-label>
+            <nav-note slot="end" color="primary">99</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Secondary Note</nav-label>
+            <nav-note slot="end" color="secondary">99</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Tertiary Note</nav-label>
+            <nav-note slot="end" color="tertiary">99</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Success Note</nav-label>
+            <nav-note slot="end" color="success">99</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Warning Note</nav-label>
+            <nav-note slot="end" color="warning">99</nav-note>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Danger Note</nav-label>
+            <nav-note slot="end" color="danger">99</nav-note>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

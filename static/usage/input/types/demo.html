@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    nav-list {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>
+          <nav-item>
+            <nav-label>Text input</nav-label>
+            <nav-input placeholder="Enter text"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Number input</nav-label>
+            <nav-input type="number" placeholder="000"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Password input</nav-label>
+            <nav-input type="password" value="password"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Email input</nav-label>
+            <nav-input type="email" placeholder="email@domain.com"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Telephone input</nav-label>
+            <nav-input type="tel" placeholder="888-888-8888"></nav-input>
+          </nav-item>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

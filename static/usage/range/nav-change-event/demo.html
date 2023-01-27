@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Range</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+  <style>
+    .demo {
+      max-width: 320px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <div class="demo">
+          <nav-range></nav-range>
+          <nav-label>navChange emitted value: <span id="lastValue"></span></nav-label>
+        </div>
+    </nav-content>
+  </nav-app>
+  <script>
+    const range = document.querySelector('nav-range');
+    const lastValue = document.querySelector('#lastValue');
+
+    range.addEventListener('navChange', ({ detail }) => {
+      lastValue.innerHTML = detail.value;
+    });
+  </script>
+</body>
+
+</html>

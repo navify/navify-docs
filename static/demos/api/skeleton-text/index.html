@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skeleton Text</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Skeleton Text</nav-title>
+          <nav-buttons slot="primary">
+            <nav-button onClick="toggleSkeleton()">Toggle</nav-button>
+          </nav-buttons>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content>
+        <nav-list id="data">
+          <nav-list-header>Albums</nav-list-header>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./thebeatles.jpeg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Abbey Road</h3>
+              <p>The Beatles</p>
+              <p>1969</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./pinkfloyd.jpeg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>The Dark Side of the Moon</h3>
+              <p>Pink Floyd</p>
+              <p>1973</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./boniver.jpeg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>For Emma, Forever Ago</h3>
+              <p>Bon Iver</p>
+              <p>2008</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./ironwine.jpeg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Beast Epic</h3>
+              <p>Iron & Wine</p>
+              <p>2017</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./porterrobinson.jpeg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Worlds</h3>
+              <p>Porter Robinson</p>
+              <p>2014</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./childishgambino.jpeg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Worlds</h3>
+              <p>Awaken, My Love!</p>
+              <p>2016</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./chancetherapper.jpeg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Coloring Book</h3>
+              <p>Chance the Rapper</p>
+              <p>2016</p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <img src="./kimbra.jpeg" />
+            </nav-thumbnail>
+            <nav-label>
+              <h3>Primal Heart</h3>
+              <p>Kimbra</p>
+              <p>2018</p>
+            </nav-label>
+          </nav-item>
+        </nav-list>
+        <nav-list id="skeleton">
+          <nav-list-header>
+            <nav-skeleton-text animated style="width: 80px"></nav-skeleton-text>
+          </nav-list-header>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <nav-skeleton-text></nav-skeleton-text>
+            </nav-thumbnail>
+            <nav-label>
+              <h3>
+                <nav-skeleton-text animated style="width: 80%"></nav-skeleton-text>
+              </h3>
+              <p>
+                <nav-skeleton-text animated style="width: 60%"></nav-skeleton-text>
+              </p>
+              <p>
+                <nav-skeleton-text animated style="width: 30%"></nav-skeleton-text>
+              </p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <nav-skeleton-text></nav-skeleton-text>
+            </nav-thumbnail>
+            <nav-label>
+              <h3>
+                <nav-skeleton-text animated style="width: 80%"></nav-skeleton-text>
+              </h3>
+              <p>
+                <nav-skeleton-text animated style="width: 60%"></nav-skeleton-text>
+              </p>
+              <p>
+                <nav-skeleton-text animated style="width: 30%"></nav-skeleton-text>
+              </p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <nav-skeleton-text></nav-skeleton-text>
+            </nav-thumbnail>
+            <nav-label>
+              <h3>
+                <nav-skeleton-text animated style="width: 80%"></nav-skeleton-text>
+              </h3>
+              <p>
+                <nav-skeleton-text animated style="width: 60%"></nav-skeleton-text>
+              </p>
+              <p>
+                <nav-skeleton-text animated style="width: 30%"></nav-skeleton-text>
+              </p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <nav-skeleton-text></nav-skeleton-text>
+            </nav-thumbnail>
+            <nav-label>
+              <h3>
+                <nav-skeleton-text animated style="width: 80%"></nav-skeleton-text>
+              </h3>
+              <p>
+                <nav-skeleton-text animated style="width: 60%"></nav-skeleton-text>
+              </p>
+              <p>
+                <nav-skeleton-text animated style="width: 30%"></nav-skeleton-text>
+              </p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <nav-skeleton-text></nav-skeleton-text>
+            </nav-thumbnail>
+            <nav-label>
+              <h3>
+                <nav-skeleton-text animated style="width: 80%"></nav-skeleton-text>
+              </h3>
+              <p>
+                <nav-skeleton-text animated style="width: 60%"></nav-skeleton-text>
+              </p>
+              <p>
+                <nav-skeleton-text animated style="width: 30%"></nav-skeleton-text>
+              </p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <nav-skeleton-text></nav-skeleton-text>
+            </nav-thumbnail>
+            <nav-label>
+              <h3>
+                <nav-skeleton-text animated style="width: 80%"></nav-skeleton-text>
+              </h3>
+              <p>
+                <nav-skeleton-text animated style="width: 60%"></nav-skeleton-text>
+              </p>
+              <p>
+                <nav-skeleton-text animated style="width: 30%"></nav-skeleton-text>
+              </p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <nav-skeleton-text></nav-skeleton-text>
+            </nav-thumbnail>
+            <nav-label>
+              <h3>
+                <nav-skeleton-text animated style="width: 80%"></nav-skeleton-text>
+              </h3>
+              <p>
+                <nav-skeleton-text animated style="width: 60%"></nav-skeleton-text>
+              </p>
+              <p>
+                <nav-skeleton-text animated style="width: 30%"></nav-skeleton-text>
+              </p>
+            </nav-label>
+          </nav-item>
+          <nav-item>
+            <nav-thumbnail slot="start">
+              <nav-skeleton-text></nav-skeleton-text>
+            </nav-thumbnail>
+            <nav-label>
+              <h3>
+                <nav-skeleton-text animated style="width: 80%"></nav-skeleton-text>
+              </h3>
+              <p>
+                <nav-skeleton-text animated style="width: 60%"></nav-skeleton-text>
+              </p>
+              <p>
+                <nav-skeleton-text animated style="width: 30%"></nav-skeleton-text>
+              </p>
+            </nav-label>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+
+    <style>
+      #data {
+        display: none;
+      }
+
+      #skeleton {
+        display: block;
+      }
+    </style>
+
+    <script>
+      function toggleSkeleton() {
+        const skeletonEl = document.getElementById('skeleton'),
+          skeletonStyle = window.getComputedStyle(skeletonEl),
+          skeletonDisplay = skeletonStyle.getPropertyValue('display');
+        const dataEl = document.getElementById('data'),
+          dataStyle = window.getComputedStyle(dataEl),
+          dataDisplay = dataStyle.getPropertyValue('display');
+
+        document.getElementById('skeleton').style.display = skeletonDisplay === 'none' ? 'block' : 'none';
+        document.getElementById('data').style.display = dataDisplay === 'none' ? 'block' : 'none';
+      }
+    </script>
+  </body>
+</html>

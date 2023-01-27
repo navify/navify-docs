@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ripple Effect</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+
+      height: 170px;
+      width: 400px;
+
+      margin: 0 auto;
+    }
+
+    b {
+      width: 100%;
+    }
+
+    .ripple-parent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+      overflow: hidden;
+
+      border: 1px solid #ddd;
+
+      user-select: none;
+    }
+
+    .rounded-rectangle {
+      width: 250px;
+      height: 75px;
+      border-radius: 8px;
+    }
+
+    .circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <div class="wrapper">
+          <b>Click on a shape to see the ripple</b>
+
+          <div class="nav-activatable ripple-parent rounded-rectangle">
+            Bounded
+            <nav-ripple-effect></nav-ripple-effect>
+          </div>
+
+          <div class="nav-activatable ripple-parent circle">
+            Unbounded
+            <nav-ripple-effect type="unbounded"></nav-ripple-effect>
+          </div>
+        </div>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+</html>

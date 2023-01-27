@@ -1,0 +1,18 @@
+<template>
+  <nav-app>
+    <Example />
+  </nav-app>
+</template>
+
+<script lang="ts">
+import { NavApp } from '@navify/kdu';
+
+import { defineComponent } from 'kdu';
+
+import Example from './components/Example.kdu';
+
+export default defineComponent({
+  name: 'App',
+  components: { NavApp, Example },
+});
+</script>

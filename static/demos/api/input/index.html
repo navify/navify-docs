@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Input</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list lines="full" class="nav-no-margin">
+          <nav-list-header lines="full">
+            <nav-label> Label Positions </nav-label>
+          </nav-list-header>
+          <nav-item>
+            <nav-label>Default Label</nav-label>
+            <nav-input placeholder="placeholder"></nav-input>
+          </nav-item>
+          <nav-item>
+            <nav-label position="fixed">Fixed Label</nav-label>
+            <nav-input placeholder="placeholder"></nav-input>
+          </nav-item>
+          <nav-item>
+            <nav-label position="stacked">Stacked Label</nav-label>
+            <nav-input placeholder="placeholder"></nav-input>
+          </nav-item>
+          <nav-item>
+            <nav-label position="floating">Floating Label</nav-label>
+            <nav-input></nav-input>
+          </nav-item>
+        </nav-list>
+
+        <nav-list lines="full" class="nav-no-margin">
+          <nav-list-header lines="full">
+            <nav-label> Input Types </nav-label>
+          </nav-list-header>
+
+          <nav-item>
+            <nav-label>Text Input</nav-label>
+            <nav-input placeholder="placeholder" type="text"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Number Input</nav-label>
+            <nav-input placeholder="placeholder" type="number"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Password Input</nav-label>
+            <nav-input placeholder="placeholder" type="password"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label position="stacked">Multiple Inputs</nav-label>
+            <nav-input placeholder="Address Line 1"></nav-input>
+            <nav-input placeholder="Address Line 2"></nav-input>
+            <nav-input placeholder="City"></nav-input>
+            <nav-input placeholder="State"></nav-input>
+            <nav-input placeholder="Zip Code"></nav-input>
+          </nav-item>
+
+          <nav-item>
+            <nav-label position="stacked">Textarea</nav-label>
+            <nav-textarea placeholder="placeholder"></nav-textarea>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

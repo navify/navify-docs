@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+    <script type="module">
+      import { popoverController } from 'https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/index.esm.js';
+      window.popoverController = popoverController;
+    </script>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Popover</nav-title>
+
+          <nav-buttons slot="end">
+            <nav-button>
+              <nav-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></nav-icon>
+            </nav-button>
+          </nav-buttons>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen class="nav-padding">
+        <nav-button expand="block">Show Popover</nav-button>
+      </nav-content>
+    </nav-app>
+    <script>
+      let currentPopover = null;
+
+      const buttons = document.querySelectorAll('nav-button');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', handleButtonClick);
+      }
+
+      async function handleButtonClick(ev) {
+        popover = await popoverController.create({
+          component: 'popover-example-page',
+          event: ev,
+          translucent: true,
+        });
+        currentPopover = popover;
+        return popover.present();
+      }
+
+      function dismissPopover() {
+        if (currentPopover) {
+          currentPopover.dismiss().then(() => {
+            currentPopover = null;
+          });
+        }
+      }
+
+      customElements.define(
+        'popover-example-page',
+        class ModalContent extends HTMLElement {
+          connectedCallback() {
+            this.innerHTML = `
+          <nav-list>
+            <nav-list-header>Navify</nav-list-header>
+            <nav-item button>Learn Navify</nav-item>
+            <nav-item button>Documentation</nav-item>
+            <nav-item button>Showcase</nav-item>
+            <nav-item button>GitHub Repo</nav-item>
+            <nav-item lines="none" detail="false" button onClick="dismissPopover()">Close</nav-item>
+          </nav-list>
+        `;
+          }
+        }
+      );
+    </script>
+  </body>
+</html>

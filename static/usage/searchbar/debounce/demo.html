@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Searchbar</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-searchbar debounce="1000"></nav-searchbar>
+        <nav-list></nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+</body>
+
+<script>
+  const searchbar = document.querySelector('nav-searchbar');
+  const list = document.querySelector('nav-list');
+
+  const data = ['Amsterdam', 'Buenos Aires', 'Cairo', 'Geneva', 'Hong Kong', 'Istanbul', 'London', 'Madrid', 'New York', 'Panama City'];
+  let results = [...data];
+  filterItems(results);
+
+  searchbar.addEventListener('navChange', handleChange);
+
+  function handleChange(event) {
+    const query = event.target.value.toLowerCase();
+    results = data.filter(d => d.toLowerCase().indexOf(query) > -1);
+    filterItems(results);
+  }
+
+  function filterItems(results) {
+    list.replaceChildren();
+
+    let items = '';
+
+    for (let i = 0; i < results.length; i++) {
+      items += `
+        <nav-item>
+          <nav-label>${results[i]}</nav-label>
+        </nav-item>
+      `;
+    }
+
+    list.innerHTML = items;
+  }
+</script>
+
+</html>

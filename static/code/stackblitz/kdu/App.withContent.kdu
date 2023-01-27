@@ -1,0 +1,20 @@
+<template>
+  <nav-app>
+    <nav-content class="nav-padding">
+      <Example />
+    </nav-content>
+  </nav-app>
+</template>
+
+<script lang="ts">
+import { NavApp, NavContent } from '@navify/kdu';
+
+import { defineComponent } from 'kdu';
+
+import Example from './components/Example.kdu';
+
+export default defineComponent({
+  name: 'App',
+  components: { NavApp, NavContent, Example },
+});
+</script>

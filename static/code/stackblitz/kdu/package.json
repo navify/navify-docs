@@ -1,0 +1,21 @@
+{
+  "name": "wite-kdu-starter",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "wite",
+    "build": "kdu-tsc --noEmit && wite build",
+    "preview": "wite preview"
+  },
+  "dependencies": {
+    "@navify/kdu": "^6.4.0",
+    "kdu": "^3.2.38",
+    "kdu-router": "4.0.16"
+  },
+  "devDependencies": {
+    "@witejs/plugin-kdu": "^2.3.3",
+    "kdu-tsc": "^0.40.21",
+    "typescript": "^4.5.4",
+    "wite": "^2.9.15"
+  }
+}

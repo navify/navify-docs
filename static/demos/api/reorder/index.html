@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reorder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Reorder</nav-title>
+          <nav-buttons slot="primary">
+            <nav-button onclick="toggleReorder()">Toggle</nav-button>
+          </nav-buttons>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-list-header>Reorder Icon</nav-list-header>
+          <nav-reorder-group id="reorder">
+            <nav-item>
+              <nav-label> Item 1 </nav-label>
+              <nav-reorder slot="end"></nav-reorder>
+            </nav-item>
+
+            <nav-item>
+              <nav-label> Item 2 </nav-label>
+              <nav-reorder slot="end"></nav-reorder>
+            </nav-item>
+
+            <nav-item>
+              <nav-label> Item 3 </nav-label>
+              <nav-reorder slot="end"></nav-reorder>
+            </nav-item>
+
+            <nav-item>
+              <nav-label> Item 4 </nav-label>
+              <nav-reorder slot="end"></nav-reorder>
+            </nav-item>
+
+            <nav-list-header>Custom Reorder Icon</nav-list-header>
+            <nav-item>
+              <nav-label> Item 5 </nav-label>
+              <nav-reorder slot="start">
+                <nav-icon name="repeat"></nav-icon>
+              </nav-reorder>
+            </nav-item>
+
+            <nav-item>
+              <nav-label> Item 6 </nav-label>
+              <nav-reorder slot="start">
+                <nav-icon name="repeat"></nav-icon>
+              </nav-reorder>
+            </nav-item>
+
+            <nav-item>
+              <nav-label> Item 7 </nav-label>
+              <nav-reorder slot="start">
+                <nav-icon name="repeat"></nav-icon>
+              </nav-reorder>
+            </nav-item>
+
+            <nav-list-header>Reorder Item</nav-list-header>
+            <nav-reorder>
+              <nav-item>
+                <nav-label> Item 8 </nav-label>
+              </nav-item>
+            </nav-reorder>
+
+            <nav-reorder>
+              <nav-item>
+                <nav-label> Item 9 </nav-label>
+              </nav-item>
+            </nav-reorder>
+
+            <nav-reorder>
+              <nav-item>
+                <nav-label> Item 10 </nav-label>
+              </nav-item>
+            </nav-reorder>
+          </nav-reorder-group>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+
+    <script>
+      function toggleReorder() {
+        const reorderGroup = document.getElementById('reorder');
+        reorderGroup.disabled = !reorderGroup.disabled;
+        reorderGroup.addEventListener('navItemReorder', ({ detail }) => {
+          detail.complete(true);
+        });
+      }
+    </script>
+  </body>
+</html>

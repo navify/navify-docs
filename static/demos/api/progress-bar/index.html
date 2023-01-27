@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <style>
+      nav-content nav-progress-bar {
+        margin: 10px 0;
+      }
+
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Progress Bar</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content class="outer-content">
+        <!-- Default Progress Bar -->
+        <nav-list>
+          <nav-list-header>
+            <nav-label>Default</nav-label>
+          </nav-list-header>
+          <nav-progress-bar></nav-progress-bar>
+        </nav-list>
+
+        <nav-list>
+          <nav-list-header>
+            <nav-label>Default at 50%</nav-label>
+          </nav-list-header>
+          <nav-progress-bar value="0.5"></nav-progress-bar>
+        </nav-list>
+
+        <nav-list>
+          <nav-list-header>
+            <nav-label>Color</nav-label>
+          </nav-list-header>
+
+          <!-- Progress Bar with Color -->
+          <nav-progress-bar color="secondary" value="0.5"></nav-progress-bar>
+          <nav-progress-bar color="tertiary" value="0.8"></nav-progress-bar>
+
+          <nav-list-header>
+            <nav-label> Indeterminate </nav-label>
+          </nav-list-header>
+          <nav-progress-bar type="indeterminate"></nav-progress-bar>
+
+          <nav-list-header>
+            <nav-label> Indeterminate (reversed) </nav-label>
+          </nav-list-header>
+          <nav-progress-bar type="indeterminate" reversed="true"></nav-progress-bar>
+
+          <nav-list-header>
+            <nav-label> Buffer </nav-label>
+          </nav-list-header>
+          <nav-progress-bar value="0.25" buffer="0.5"></nav-progress-bar>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

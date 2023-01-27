@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@navify/core/dist/navify/navify.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core/css/navify.bundle.css" />
+    <style>
+      :root {
+        --nav-safe-area-top: 20px;
+        --nav-safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav-app>
+      <nav-header translucent>
+        <nav-toolbar>
+          <nav-title>Toggle</nav-title>
+        </nav-toolbar>
+      </nav-header>
+
+      <nav-content fullscreen>
+        <nav-list>
+          <nav-item>
+            <nav-label>Blueberry</nav-label>
+            <nav-toggle slot="start" name="blueberry" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Apple</nav-label>
+            <nav-toggle slot="start" name="apple" color="secondary" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Grape</nav-label>
+            <nav-toggle slot="start" name="grape" color="tertiary" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Kiwi</nav-label>
+            <nav-toggle slot="start" name="kiwi" color="success" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Orange</nav-label>
+            <nav-toggle slot="start" name="banana" color="warning" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Cherry</nav-label>
+            <nav-toggle slot="start" name="cherry" color="danger" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Banana</nav-label>
+            <nav-toggle slot="start" name="banana" color="light" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Cantaloupe</nav-label>
+            <nav-toggle slot="start" name="cantaloupe" color="medium" checked></nav-toggle>
+          </nav-item>
+
+          <nav-item>
+            <nav-label>Blackberry</nav-label>
+            <nav-toggle slot="start" name="blackberry" color="dark" checked></nav-toggle>
+          </nav-item>
+        </nav-list>
+      </nav-content>
+    </nav-app>
+  </body>
+</html>

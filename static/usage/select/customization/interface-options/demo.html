@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select - Interface Options</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@navify/core@6/dist/navify/navify.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@navify/core@6/css/navify.bundle.css" />
+
+  <style>
+    .container > nav-list {
+      min-width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav-app>
+    <nav-content>
+      <div class="container">
+        <nav-list>        
+          <nav-item>
+            <nav-label>Alert</nav-label>
+            <nav-select id="customAlertSelect" interface="alert" placeholder="Select One">
+              <nav-select-option value="bacon">Bacon</nav-select-option>
+              <nav-select-option value="onions">Onions</nav-select-option>
+              <nav-select-option value="pepperoni">Pepperoni</nav-select-option>
+            </nav-select>
+          </nav-item>
+        
+          <nav-item>
+            <nav-label>Popover</nav-label>
+            <nav-select id="customPopoverSelect" interface="popover" placeholder="Select One">
+              <nav-select-option value="brown">Brown</nav-select-option>
+              <nav-select-option value="blonde">Blonde</nav-select-option>
+              <nav-select-option value="red">Red</nav-select-option>
+            </nav-select>
+          </nav-item>
+        
+          <nav-item>
+            <nav-label>Action Sheet</nav-label>
+            <nav-select id="customActionSheetSelect" interface="action-sheet" placeholder="Select One">
+              <nav-select-option value="red">Red</nav-select-option>
+              <nav-select-option value="green">Green</nav-select-option>
+              <nav-select-option value="blue">Blue</nav-select-option>
+            </nav-select>
+          </nav-item>
+        </nav-list>
+      </div>
+    </nav-content>
+  </nav-app>
+
+  <script>
+    const customAlertSelect = document.getElementById('customAlertSelect');
+    const customAlertOptions = {
+      header: 'Pizza Toppings',
+      subHeader: 'Select your favorite topping',
+      message: 'Choose only one',
+      translucent: true
+    };
+    customAlertSelect.interfaceOptions = customAlertOptions;
+
+    const customPopoverSelect = document.getElementById('customPopoverSelect');
+    const customPopoverOptions = {
+      header: 'Hair Color',
+      subHeader: 'Select your hair color',
+      message: 'Only select your dominant hair color'
+    };
+    customPopoverSelect.interfaceOptions = customPopoverOptions;
+
+    const customActionSheetSelect = document.getElementById('customActionSheetSelect');
+    const customActionSheetOptions = {
+      header: 'Colors',
+      subHeader: 'Select your favorite color'
+    };
+    customActionSheetSelect.interfaceOptions = customActionSheetOptions;
+  </script>
+</body>
+
+</html>
