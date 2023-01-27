@@ -6,7 +6,7 @@
     "prebuild": "npm run generate-markdown",
     "build": "npm run build:production",
     "build:preview": "docusaurus build --locale en",
-    "build:production": "docusaurus build",
+    "build:production": "docusaurus build --out-dir build/docs",
     "clear": "docusaurus clear",
     "docusaurus": "docusaurus",
     "generate-markdown": "concurrently \"node scripts/api\"",

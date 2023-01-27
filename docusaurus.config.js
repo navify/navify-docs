@@ -117,24 +117,25 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        path: 'docs',
         routeBasePath: '/',
         sidebarPath: require.resolve('./sidebars.js'),
-        // editUrl: ({ versionDocsDirPath, docPath }) => {
-        //   if ((match = docPath.match(/api\/(.*)\.md/)) != null) {
-        //     return `https://github.com/navify/navify-docs/tree/main/docs/api/${match[1]}.md`;
-        //   }
-        //   if ((match = docPath.match(/cli\/commands\/(.*)\.md/)) != null) {
-        //     return `https://github.com/navify/navify-cli/edit/main/packages/@navify/cli/src/commands/${match[1].replace(
-        //       '-',
-        //       '/'
-        //     )}.ts`;
-        //   }
-        //   if ((match = docPath.match(/native\/(.*)\.md/)) != null) {
-        //     return `https://github.com/navify/jigra-plugins/edit/main/${match[1]}/README.md`;
-        //   }
-        //   return `https://github.com/navify/navify-docs/edit/main/${versionDocsDirPath}/${docPath}`;
-        // },
-        // exclude: ['README.md'],
+        editUrl: ({ docPath }) => {
+          if ((match = docPath.match(/api\/(.*)\.md/)) != null) {
+            return `https://github.com/navify/navify-docs/tree/main/docs/api/${match[1]}.md`;
+          }
+          if ((match = docPath.match(/cli\/commands\/(.*)\.md/)) != null) {
+            return `https://github.com/navify/navify-cli/edit/main/packages/@navify/cli/src/commands/${match[1].replace(
+              '-',
+              '/'
+            )}.ts`;
+          }
+          if ((match = docPath.match(/native\/(.*)\.md/)) != null) {
+            return `https://github.com/navify/jigra-plugins/edit/main/${match[1]}/README.md`;
+          }
+          return `https://github.com/navify/navify-docs/edit/main/docs/${docPath}`;
+        },
+        exclude: ['README.md'],
       },
     ],
     '@docusaurus/plugin-content-pages',
